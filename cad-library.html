@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="/assets/images/favicon.png">
+
+    <title>CAD Library | Onshape4FRC</title>
+
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>CAD Library | Onshape4FRC</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="CAD Library" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Onshape CAD and Design resources to help teach for FRC." />
+<meta property="og:description" content="Onshape CAD and Design resources to help teach for FRC." />
+<meta property="og:site_name" content="Onshape4FRC" />
+<script type="application/ld+json">
+{"description":"Onshape CAD and Design resources to help teach for FRC.","url":"/cad-library","@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/assets/images/onshape4frc-logo.png"}},"headline":"CAD Library","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link href="/assets/css/screen.css" rel="stylesheet">
+
+    <link href="/assets/css/main.css" rel="stylesheet">
+
+
+</head>
+
+
+
+<body class="layout-page">
+    <!-- defer loading of font and font awesome -->
+    <noscript id="deferred-styles">
+        <link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+            integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    </noscript>
+
+
+    <!-- Begin Menu Navigation
+================================================== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+        <div class="container pr-0">
+
+            <!-- Begin Logo -->
+            <a class="navbar-brand" href="/">
+                <h1 class="sitetitle">Onshape4FRC</h1>
+            </a>
+            <!-- End Logo -->
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMediumish">
+
+                <!-- Begin Menu -->
+
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog">Blog</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/getting-started">Getting Started</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/calculators">Calculators</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cad-library">CAD Library</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/external-resources">External Resources</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="/contribute">Contribute</a>
+                    </li> -->
+
+                    <!-- <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/"> Docs</a>
+                </li> -->
+
+                    <!-- <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://github.com/wowthemesnet/mediumish-theme-jekyll"><i class="fab fa-github"></i> Fork on Github</a>
+                </li> -->
+
+                    <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+                </ul>
+
+                <!-- End Menu -->
+
+            </div>
+
+        </div>
+    </nav>
+    <!-- End Navigation
+================================================== -->
+
+    <div class="site-content">
+
+        <div class="container">
+
+            <!-- Site Title
+================================================== -->
+            <div class="mainheading">
+                <p class="lead">
+                    Onshape CAD and Design resources to help teach for FRC.
+                </p>
+            </div>
+
+            <!-- Content
+================================================== -->
+            <div class="main-content">
+                <section>
+    <div class="section-title">
+        <h2><span>CAD Library</span></h2>
+    </div>
+
+    <div class="article-post">
+    <div class="row justify-content-between">
+    <div class="col-md-8 pr-5">
+
+        <p>One of the great things about Onshape are the parts libraries and featurescripts created by the community.
+            This page is a list of some of the most useful ones we've found.</p>
+
+        <div id="MKCad">
+            <h4>MKCad Onshape Library</h4>
+
+            <p>This library has a wide variety of COTs parts which can be easily imported into your assemblies. This is
+                a community created library and you can see its latest updates in the <a target="_blank" href="https://www.chiefdelphi.com/t/mkcad-2020-season-updates/367821">ChiefDelphi Thread.</a></p>
+
+            <p>The easiest way to use this library is to subscribe to the MKCad App, which is available on the <a href="https://appstore.onshape.com/apps/Manufacturers%20Models/2ZT7X5D646R3LM3ZND7LGBTYRVM4SVH6CDDGM6I=/description" target="_blank" rel="noopener noreferrer">Onshape App Store.</a> Simply click "Subscribe" on this page and follow the prompts.</p>
+
+            <p>Once you have subscribed to the app, it will be available in your assemblies on the right side of your screen:</p>
+
+            <img src="/assets/images/mkcad/mkcad_app_location.png" />
+
+            <p>Clicking on this icon will open up the app. Click on any document or search to find parts and assemblies.</p>
+
+            <img src="/assets/images/mkcad/mkcad_app_open.png" />
+
+            <p>Clicking on a part or assembly will insert it into the currently open assembly. If the part or assembly has configuration options, a menu will appear allowing you to select these.</p>
+
+            <img src="/assets/images/mkcad/mkcad_app_config.png" />
+
+            <p>You can also label the MKCad documents to use with the normal insertion menu.</p>
+            <ol>
+                <li>Do a public search in Onshape by clicking <a target="_blank" rel="noopener noreferrer" href="https://cad.onshape.com/documents?nodeId=3&amp;resourceType=filter&amp;q=type:document%20name:%22MKCad%22%20description:%22Official%22">this
+                        link.</a></li>
+                <li>Click the label icon in the top right (next to the trash can) and then in the drop down click
+                    'Create New Label'. Call it 'MKCad'</li>
+                <li>Next you will add all documents from this search to the label by right clicking on the document,
+                    clicking 'Labels...', then adding to the newly created MKCad label</li>
+            </ol>
+            <p>You should now see the label with all the documents on the left side of navigation below the create
+                button.</p>
+
+        </div>
+
+        <div id="Featurescripts">
+            <h4>Featurescripts</h4>
+
+            <p>Onshape has their own scripting language to create custom features to automate aspects of design called
+                <a target="_blank" href="https://www.onshape.com/features/custom-features">Featurescripts</a>. There are
+                also a lot of community generated scripts which are particularly useful to FRC.
+            </p>
+
+            <p>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Learn how to install Featurescripts &raquo;
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <ol>
+                        <li>Open any Onshape document and go inside of a part studio</li>
+                        <li>Click the right most button on the toolbar ('Add custom features')</li>
+                        <ul>
+                            <li>Note: If you have previously added any Featurescripts one of those may show up as the
+                                right most icon. In that case click the dropdown to show the add button.</li>
+                        </ul>
+                        <li>Paste the link of the Featurescript you're looking to add into the search bar (you can use
+                            the 'Copy Link' button next to the below scripts')
+                            <ul>
+                                <li>Note: Many of the below feature scripts are part of the same overall document so you
+                                    can add multiple from the same link.</li>
+                            </ul>
+                        </li>
+                        <li>Select the given script you want. It is then accessible from the same drop down where you
+                            added the feature.</li>
+                    </ol>
+                </div>
+            </div>
+
+            
+
+            
+
+            <h5>Extrude Individual</h5>
+
+            <div class="row">
+                <div class="col-md-4 pr-5">
+                    <img class="img-fluid lazyimg" src="/assets/images/extrudeindividual.png" />
+                    
+                    
+                    <p>Made by <a href="https://www.chiefdelphi.com/u/dydx" target="_blank">Julia</a></p>
+                    
+                </div>
+                <div class="col-md-8 pr-5">
+                    <p>Select a sketch and automatically create a new body for each section of the sketch. Useful for creating multiple tubes in one operation.</p>
+                    
+                    <a target="_blank" rel="noopener noreferrer" href="/blog/using-extrude-individual/">
+                        Learn how to use Extrude Individual
+                    </a>
+                    
+                    <hr />
+                    <a target="_blank" rel="noopener noreferrer" href="https://cad.onshape.com/documents/95c00401c440b44ad8799ef5/w/1f1ebce01a3b8eb6fa102975/e/f59ee8c28530122eb7fa9f5c">
+                        Extrude Individual Link
+                    </a>
+                    <a onclick="CopyText('https://cad.onshape.com/documents/95c00401c440b44ad8799ef5/w/1f1ebce01a3b8eb6fa102975/e/f59ee8c28530122eb7fa9f5c');" class="btn btn-secondary">Copy Link</a>
+                </div>
+            </div>
+            <br />
+            
+
+            
+
+            <h5>Tube Converter</h5>
+
+            <div class="row">
+                <div class="col-md-4 pr-5">
+                    <img class="img-fluid lazyimg" src="/assets/images/tubeconverter.png" />
+                    
+                    
+                    <p>Made by <a href="https://www.chiefdelphi.com/u/dydx" target="_blank">Julia</a></p>
+                    
+                </div>
+                <div class="col-md-8 pr-5">
+                    <p>Coverts a raw extrusion into a tube like is typically used in FRC with parameters for tube thickness and hole patterns.</p>
+                    
+                    <a target="_blank" rel="noopener noreferrer" href="/blog/using-tube-converter/">
+                        Learn how to use Tube Converter
+                    </a>
+                    
+                    <hr />
+                    <a target="_blank" rel="noopener noreferrer" href="https://cad.onshape.com/documents/95c00401c440b44ad8799ef5/w/1f1ebce01a3b8eb6fa102975/e/7f62400703032fab9a7a3320">
+                        Tube Converter Link
+                    </a>
+                    <a onclick="CopyText('https://cad.onshape.com/documents/95c00401c440b44ad8799ef5/w/1f1ebce01a3b8eb6fa102975/e/7f62400703032fab9a7a3320');" class="btn btn-secondary">Copy Link</a>
+                </div>
+            </div>
+            <br />
+            
+
+            
+
+            <h5>Custom Length Extrusion</h5>
+
+            <div class="row">
+                <div class="col-md-4 pr-5">
+                    <img class="img-fluid lazyimg" src="/assets/images/customextrusion.jpeg" />
+                    
+                    
+                    <p>Made by <a href="https://www.chiefdelphi.com/u/rickyrobot" target="_blank">Ricky</a></p>
+                    
+                </div>
+                <div class="col-md-8 pr-5">
+                    <p>Quickly generate custom lengths of a wide variety of extrusions.</p>
+                    
+                    <hr />
+                    <a target="_blank" rel="noopener noreferrer" href="https://cad.onshape.com/documents/18b35cfcf2c6cf5668830f90/w/15216769574e8a81c923173f/e/5a93de3b70e102d2a2612a27">
+                        Custom Length Extrusion Link
+                    </a>
+                    <a onclick="CopyText('https://cad.onshape.com/documents/18b35cfcf2c6cf5668830f90/w/15216769574e8a81c923173f/e/5a93de3b70e102d2a2612a27');" class="btn btn-secondary">Copy Link</a>
+                </div>
+            </div>
+            <br />
+            
+
+            
+
+            <h5>FilletXpert</h5>
+
+            <div class="row">
+                <div class="col-md-4 pr-5">
+                    <img class="img-fluid lazyimg" src="/assets/images/FilletXpert.png" />
+                    
+                    
+                    <p>Made by <a href="https://www.chiefdelphi.com/u/dydx" target="_blank">Julia</a></p>
+                    
+                </div>
+                <div class="col-md-8 pr-5">
+                    <p>Fillet all edges touching a face in a certain direction. Based on Solidworks’ FilletXpert feature.</p>
+                    
+                    <hr />
+                    <a target="_blank" rel="noopener noreferrer" href="https://cad.onshape.com/documents/95c00401c440b44ad8799ef5/w/1f1ebce01a3b8eb6fa102975/e/be51a7d601bee5eb80c431ad">
+                        FilletXpert Link
+                    </a>
+                    <a onclick="CopyText('https://cad.onshape.com/documents/95c00401c440b44ad8799ef5/w/1f1ebce01a3b8eb6fa102975/e/be51a7d601bee5eb80c431ad');" class="btn btn-secondary">Copy Link</a>
+                </div>
+            </div>
+            <br />
+            
+
+            
+
+            <h5>Shaft Generator</h5>
+
+            <div class="row">
+                <div class="col-md-4 pr-5">
+                    <img class="img-fluid lazyimg" src="/assets/images/shaft-generator.png" />
+                    
+                    
+                    <p>Made by <a href="https://www.chiefdelphi.com/u/dydx" target="_blank">Julia</a></p>
+                    
+                </div>
+                <div class="col-md-8 pr-5">
+                    <p>Quickly generate shafts with parameters for choosing shaft retention methods.</p>
+                    
+                    <a target="_blank" rel="noopener noreferrer" href="/blog/using-shaft-generator/">
+                        Learn how to use Shaft Generator
+                    </a>
+                    
+                    <hr />
+                    <a target="_blank" rel="noopener noreferrer" href="https://cad.onshape.com/documents/95c00401c440b44ad8799ef5/w/1f1ebce01a3b8eb6fa102975/e/8db1f48368bdac821997185f">
+                        Shaft Generator Link
+                    </a>
+                    <a onclick="CopyText('https://cad.onshape.com/documents/95c00401c440b44ad8799ef5/w/1f1ebce01a3b8eb6fa102975/e/8db1f48368bdac821997185f');" class="btn btn-secondary">Copy Link</a>
+                </div>
+            </div>
+            <br />
+            
+
+            
+
+            <h5>Spacer Generator</h5>
+
+            <div class="row">
+                <div class="col-md-4 pr-5">
+                    <img class="img-fluid lazyimg" src="/assets/images/spacer-generator.png" />
+                    
+                    
+                    <p>Made by <a href="https://www.chiefdelphi.com/u/dydx" target="_blank">Julia</a></p>
+                    
+                </div>
+                <div class="col-md-8 pr-5">
+                    <p>Quickly generate custom spacers.</p>
+                    
+                    <hr />
+                    <a target="_blank" rel="noopener noreferrer" href="https://cad.onshape.com/documents/95c00401c440b44ad8799ef5/w/1f1ebce01a3b8eb6fa102975/e/9d38ab00b89aa97b6c65b7b0">
+                        Spacer Generator Link
+                    </a>
+                    <a onclick="CopyText('https://cad.onshape.com/documents/95c00401c440b44ad8799ef5/w/1f1ebce01a3b8eb6fa102975/e/9d38ab00b89aa97b6c65b7b0');" class="btn btn-secondary">Copy Link</a>
+                </div>
+            </div>
+            <br />
+            
+
+            
+
+            <h5>Gusset Generator</h5>
+
+            <div class="row">
+                <div class="col-md-4 pr-5">
+                    <img class="img-fluid lazyimg" src="https://www.chiefdelphi.com/uploads/default/original/3X/8/f/8f7ba06976668b45d5ab61a55deec51f812a1ab0.png" />
+                    
+                    
+                    <p>Made by <a href="https://www.chiefdelphi.com/u/dydx" target="_blank">Julia</a></p>
+                    
+                </div>
+                <div class="col-md-8 pr-5">
+                    <p>Generate gussets by simply selecting the holes which define the shape of the gusset.</p>
+                    
+                    <hr />
+                    <a target="_blank" rel="noopener noreferrer" href="https://cad.onshape.com/documents/95c00401c440b44ad8799ef5/w/1f1ebce01a3b8eb6fa102975/e/80b86b695b75c4dcf2be5a7f">
+                        Gusset Generator Link
+                    </a>
+                    <a onclick="CopyText('https://cad.onshape.com/documents/95c00401c440b44ad8799ef5/w/1f1ebce01a3b8eb6fa102975/e/80b86b695b75c4dcf2be5a7f');" class="btn btn-secondary">Copy Link</a>
+                </div>
+            </div>
+            <br />
+            
+
+            
+
+            <h5>Lighten</h5>
+
+            <div class="row">
+                <div class="col-md-4 pr-5">
+                    <img class="img-fluid lazyimg" src="/assets/images/lighten.png" />
+                    
+                </div>
+                <div class="col-md-8 pr-5">
+                    <p>Lighten your parts easier with this featurescript and a sketch of the areas you want removed.</p>
+                    
+                    <a target="_blank" rel="noopener noreferrer" href="/blog/using-lighten/">
+                        Learn how to use Lighten
+                    </a>
+                    
+                    <hr />
+                    <a target="_blank" rel="noopener noreferrer" href="https://cad.onshape.com/documents/573f7d70e4b0fddafb52148c/v/85bb63ae5685ae3614116952/e/5eccf6d369b0312a728d77d3">
+                        Lighten Link
+                    </a>
+                    <a onclick="CopyText('https://cad.onshape.com/documents/573f7d70e4b0fddafb52148c/v/85bb63ae5685ae3614116952/e/5eccf6d369b0312a728d77d3');" class="btn btn-secondary">Copy Link</a>
+                </div>
+            </div>
+            <br />
+            
+
+            
+
+            <h5>Plate Generator</h5>
+
+            <div class="row">
+                <div class="col-md-4 pr-5">
+                    <img class="img-fluid lazyimg" src="/assets/images/plate-generator.png" />
+                    
+                    
+                    <p>Made by <a href="https://www.chiefdelphi.com/u/venomousfire" target="_blank">Alex</a></p>
+                    
+                </div>
+                <div class="col-md-8 pr-5">
+                    <p>Generate custom plates from nothing more than a few sketch points.</p>
+                    
+                    <hr />
+                    <a target="_blank" rel="noopener noreferrer" href="https://cad.onshape.com/documents/9cffa92db8b62219498f89af/w/06b332ccabc9d2e0aa0abf88/e/13c1364fc3602748444c2f48">
+                        Plate Generator Link
+                    </a>
+                    <a onclick="CopyText('https://cad.onshape.com/documents/9cffa92db8b62219498f89af/w/06b332ccabc9d2e0aa0abf88/e/13c1364fc3602748444c2f48');" class="btn btn-secondary">Copy Link</a>
+                </div>
+            </div>
+            <br />
+            
+
+            
+
+            <h5>Belt Generator</h5>
+
+            <div class="row">
+                <div class="col-md-4 pr-5">
+                    <img class="img-fluid lazyimg" src="/assets/images/belt-generator.png" />
+                    
+                    
+                    <p>Made by <a href="https://www.chiefdelphi.com/u/venomousfire" target="_blank">Alex</a></p>
+                    
+                </div>
+                <div class="col-md-8 pr-5">
+                    <p>Generate belts/pulleys between given center points.</p>
+                    
+                    <hr />
+                    <a target="_blank" rel="noopener noreferrer" href="https://cad.onshape.com/documents/9cffa92db8b62219498f89af/w/06b332ccabc9d2e0aa0abf88/e/99672d1e329b38e647d90146">
+                        Belt Generator Link
+                    </a>
+                    <a onclick="CopyText('https://cad.onshape.com/documents/9cffa92db8b62219498f89af/w/06b332ccabc9d2e0aa0abf88/e/99672d1e329b38e647d90146');" class="btn btn-secondary">Copy Link</a>
+                </div>
+            </div>
+            <br />
+            
+
+            
+
+            <h5>Spur Gear Generator</h5>
+
+            <div class="row">
+                <div class="col-md-4 pr-5">
+                    <img class="img-fluid lazyimg" src="/assets/images/gear-generator.png" />
+                    
+                    
+                    <p>Made by <a href="https://www.chiefdelphi.com/u/venomousfire" target="_blank">Alex</a></p>
+                    
+                </div>
+                <div class="col-md-8 pr-5">
+                    <p>Generate highly customizable spur, helical, and double helical gears.</p>
+                    
+                    <hr />
+                    <a target="_blank" rel="noopener noreferrer" href="https://cad.onshape.com/documents/9cffa92db8b62219498f89af/w/06b332ccabc9d2e0aa0abf88/e/af546065f335c8ec6da0f233">
+                        Spur Gear Generator Link
+                    </a>
+                    <a onclick="CopyText('https://cad.onshape.com/documents/9cffa92db8b62219498f89af/w/06b332ccabc9d2e0aa0abf88/e/af546065f335c8ec6da0f233');" class="btn btn-secondary">Copy Link</a>
+                </div>
+            </div>
+            <br />
+            
+
+            
+
+            <h5>Isogrid Pattern</h5>
+
+            <div class="row">
+                <div class="col-md-4 pr-5">
+                    <img class="img-fluid lazyimg" src="/assets/images/isogrid.png" />
+                    
+                    
+                    <p>Made by <a href="https://www.chiefdelphi.com/u/dydx" target="_blank">Julia</a></p>
+                    
+                </div>
+                <div class="col-md-8 pr-5">
+                    <p>Adds an Isogrid pattern to parts.</p>
+                    
+                    <hr />
+                    <a target="_blank" rel="noopener noreferrer" href="https://cad.onshape.com/documents/95c00401c440b44ad8799ef5/w/1f1ebce01a3b8eb6fa102975/e/0d7c22c952c5c2ee2cfb1e43">
+                        Isogrid Pattern Link
+                    </a>
+                    <a onclick="CopyText('https://cad.onshape.com/documents/95c00401c440b44ad8799ef5/w/1f1ebce01a3b8eb6fa102975/e/0d7c22c952c5c2ee2cfb1e43');" class="btn btn-secondary">Copy Link</a>
+                </div>
+            </div>
+            <br />
+            
+
+            
+
+            <h5>Motor Mount Hole Generator</h5>
+
+            <div class="row">
+                <div class="col-md-4 pr-5">
+                    <img class="img-fluid lazyimg" src="/assets/images/motor-mount-generator.png" />
+                    
+                    
+                    <p>Made by <a href="https://www.chiefdelphi.com/u/dydx" target="_blank">Julia</a></p>
+                    
+                </div>
+                <div class="col-md-8 pr-5">
+                    <p>Adds holes for motor mounting holes (and vents on 775 style motors).</p>
+                    
+                    <hr />
+                    <a target="_blank" rel="noopener noreferrer" href="https://cad.onshape.com/documents/95c00401c440b44ad8799ef5/w/1f1ebce01a3b8eb6fa102975/e/f7d2fd67eee8b713d4a91fb3">
+                        Motor Mount Hole Generator Link
+                    </a>
+                    <a onclick="CopyText('https://cad.onshape.com/documents/95c00401c440b44ad8799ef5/w/1f1ebce01a3b8eb6fa102975/e/f7d2fd67eee8b713d4a91fb3');" class="btn btn-secondary">Copy Link</a>
+                </div>
+            </div>
+            <br />
+            
+
+            
+
+            <h5>Automated Part Numbering</h5>
+
+            <div class="row">
+                <div class="col-md-4 pr-5">
+                    <img class="img-fluid lazyimg" src="/assets/images/partnumbering.png" />
+                    
+                    
+                    <p>Made by <a href="https://www.chiefdelphi.com/u/heatblast016" target="_blank">Abhi</a></p>
+                    
+                </div>
+                <div class="col-md-8 pr-5">
+                    <p>Automatically assign part numbers to your parts.</p>
+                    
+                    <hr />
+                    <a target="_blank" rel="noopener noreferrer" href="https://cad.onshape.com/documents/443e443bb2a37736743bf314/w/6539c7379d36307a6a2cc01d/e/ef4e1b0c40e1dbf2ee36d02e">
+                        Automated Part Numbering Link
+                    </a>
+                    <a onclick="CopyText('https://cad.onshape.com/documents/443e443bb2a37736743bf314/w/6539c7379d36307a6a2cc01d/e/ef4e1b0c40e1dbf2ee36d02e');" class="btn btn-secondary">Copy Link</a>
+                </div>
+            </div>
+            <br />
+            
+
+            
+
+            <h5>Laser joint generator</h5>
+
+            <div class="row">
+                <div class="col-md-4 pr-5">
+                    <img class="img-fluid lazyimg" src="/assets/images/laser-joint-generator.png" />
+                    
+                </div>
+                <div class="col-md-8 pr-5">
+                    <p>Adds slots for mounting two pieces of laser cut material together.</p>
+                    
+                    <a target="_blank" rel="noopener noreferrer" href="https://cad.onshape.com/documents/578830e4e4b0e65410f9c34e/v/a5c24a6977214781eaf042fa/e/7af109b2f1cead90850525ae">
+                        Learn how to use Laser joint generator
+                    </a>
+                    
+                    <hr />
+                    <a target="_blank" rel="noopener noreferrer" href="https://cad.onshape.com/documents/578830e4e4b0e65410f9c34e/v/a5c24a6977214781eaf042fa/e/7af109b2f1cead90850525ae">
+                        Laser joint generator Link
+                    </a>
+                    <a onclick="CopyText('https://cad.onshape.com/documents/578830e4e4b0e65410f9c34e/v/a5c24a6977214781eaf042fa/e/7af109b2f1cead90850525ae');" class="btn btn-secondary">Copy Link</a>
+                </div>
+            </div>
+            <br />
+            
+
+            
+
+            <h5>T-slot joint generator</h5>
+
+            <div class="row">
+                <div class="col-md-4 pr-5">
+                    <img class="img-fluid lazyimg" src="/assets/images/t-slot-generator.png" />
+                    
+                </div>
+                <div class="col-md-8 pr-5">
+                    <p>Adds slots and holes for mounting two pieces of laser cut material together with a bolt and nut.</p>
+                    
+                    <a target="_blank" rel="noopener noreferrer" href="https://cad.onshape.com/documents/5791a167e4b03c2aa6af3b35/v/3f40c3c40c8dbc9e01713c27/e/acc455ae2adcf11a571ba510">
+                        Learn how to use T-slot joint generator
+                    </a>
+                    
+                    <hr />
+                    <a target="_blank" rel="noopener noreferrer" href="https://cad.onshape.com/documents/5791a167e4b03c2aa6af3b35/v/3f40c3c40c8dbc9e01713c27/e/acc455ae2adcf11a571ba510">
+                        T-slot joint generator Link
+                    </a>
+                    <a onclick="CopyText('https://cad.onshape.com/documents/5791a167e4b03c2aa6af3b35/v/3f40c3c40c8dbc9e01713c27/e/acc455ae2adcf11a571ba510');" class="btn btn-secondary">Copy Link</a>
+                </div>
+            </div>
+            <br />
+            
+
+            
+
+            <h5>Automatic part layout</h5>
+
+            <div class="row">
+                <div class="col-md-4 pr-5">
+                    <img class="img-fluid lazyimg" src="/assets/images/auto-layout.png" />
+                    
+                </div>
+                <div class="col-md-8 pr-5">
+                    <p>Automatically lays out parts on a flat surface for laser cutting or milling.</p>
+                    
+                    <hr />
+                    <a target="_blank" rel="noopener noreferrer" href="https://cad.onshape.com/documents/3b3bb87c95d03259328fdb1f/w/9828ddc941ddc2896ebeebdb/e/fcecc760e1bc713ee3aae876">
+                        Automatic part layout Link
+                    </a>
+                    <a onclick="CopyText('https://cad.onshape.com/documents/3b3bb87c95d03259328fdb1f/w/9828ddc941ddc2896ebeebdb/e/fcecc760e1bc713ee3aae876');" class="btn btn-secondary">Copy Link</a>
+                </div>
+            </div>
+            <br />
+            
+
+            <div>
+                <h5>General Featurescript Collection</h5>
+                <p>List of various useful scripts which aren't FRC specific: <a href="https://github.com/dcowden/featurescript" target="_blank">Link</a></p>
+            </div>
+
+            <div id="RobotCAD">
+                <h4>Robot CAD Collection</h4>
+                <p>Robot CAD from previous years can be a great learning resource to look at how other teams solved old
+                    challenges. Thankfully teams have compiled lists together to make it easy to find robots from
+                    specific teams and years.</p>
+                <div class="row justify-content-center">
+                    <div class="col-md-4 pr-5">
+                        <img src="/assets/images/3192020.png" />
+                    </div>
+                    <div class="col-md-8 pr-5">
+                        <h5>Useful Links</h5>
+                        <a class="btn btn-primary" href="http://cadcollection.Spectrum3847.org" target="_blank">Spectrum
+                            CAD Collection</a>
+                        <hr />
+                        <a class="btn btn-primary" href="https://cad.onshape.com/documents?nodeId=3&amp;resourceType=filter&amp;q=_all:TCA%20FRC" target="_blank">The Compass Alliance Onshape Collection</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Right side -->
+    <div class="col-md-4">
+
+        <div class="sticky-top sticky-top-80">
+            <h5>Are We Missing Anything?</h5>
+
+            <p>If we're missing any useful resources be sure to let us know so we can get it added.</p>
+
+            <a href="/contribute" class="btn btn-primary">Add to the CAD Library</a>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function CopyText(text) {
+        // var text = "Example text to appear on clipboard";
+        navigator.clipboard.writeText(text).then(function () {
+            // console.log('Async: Copying to clipboard was successful!');
+        }, function (err) {
+            console.error('Async: Could not copy text: ', err);
+        });
+    }
+</script>
+
+
+    </div>
+
+    
+</section>
+            </div>
+
+            
+
+        </div>
+
+        <!-- Begin Footer
+================================================== -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                        <!-- Copyright © 2021 Onshape4FRC -->
+                        Built by Max Westwater of FRC 6328
+                    </div>
+                    <div class="col-md-6 col-sm-6 text-center text-lg-right">
+                        <a href="/privacy">Privacy Information</a> |
+                        Built using the
+                        <a target="_blank" href="https://github.com/wowthemesnet/mediumish-theme-jekyll">Mediumish
+                            Jekyll Theme</a>.
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer
+================================================== -->
+
+    </div> <!-- /.site-content -->
+
+    <!-- Scripts
+================================================== -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script src="/assets/js/mediumish.js"></script>
+
+    
+
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    
+
+    <style>
+    #cookie-notice {padding: 0.5rem 1rem; display: none; text-align: center; position: fixed; bottom: 0; width: calc(100% - 2rem); background: #222; color: rgba(255,255,255,0.8);}
+    #cookie-notice a {display: inline-block; cursor: pointer; margin-left: 0.5rem;}
+    @media (max-width: 767px) {
+        #cookie-notice span {display: block; padding-top: 3px; margin-bottom: 1rem;}
+        #cookie-notice a {position: relative; bottom: 4px;}
+    }
+</style>
+<div id="cookie-notice"><span>We would like to use third party cookies and scripts to improve the functionality of this website.</span><a id="cookie-notice-accept" class="btn btn-primary btn-sm">Approve</a><a href="/privacy" class="btn btn-primary btn-sm">More info</a></div>
+<script>
+    function createCookie(name,value,days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+    function eraseCookie(name) {
+        createCookie(name,"",-1);
+    }
+
+    
+        if(readCookie('cookie-notice-dismissed')=='true') {
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', '${{ secrets.GOOGLE_ANALYTICS }}', 'auto');
+            ga('send', 'pageview');
+        } else {
+            document.getElementById('cookie-notice').style.display = 'block';
+        }
+    
+    document.getElementById('cookie-notice-accept').addEventListener("click",function() {
+        createCookie('cookie-notice-dismissed','true',31);
+        document.getElementById('cookie-notice').style.display = 'none';
+        location.reload();
+    });
+
+</script>
+
+</body>
+
+</html>

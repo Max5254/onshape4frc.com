@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Onshape4FRC</title>
+    <description>Onshape CAD and Design resources to help teach for FRC.</description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 17 May 2021 00:40:18 +0000</pubDate>
+    <lastBuildDate>Mon, 17 May 2021 00:40:18 +0000</lastBuildDate>
+    <generator>Jekyll v3.9.0</generator>
+    
+      <item>
+        <title>Using the Shaft Generator Featurescript</title>
+        <description>&lt;p&gt;The shaft generator featurescript does exactly what the name implies -  automatically generates any and all shaft types you’ll need in FRC. Gone are the days of spending time repeatedly sketching boring hex shafts.&lt;/p&gt;
+
+&lt;p&gt;Simply launch the shaft generator and select the desired origin of the shaft. From here you have the option to select an end face or simply enter the length of the shaft. Select your preferred retention type and voila - you have yourself a generated shaft.&lt;/p&gt;
+
+&lt;div class=&quot;row justify-content-center pb-4&quot;&gt;
+    &lt;div class=&quot;col-md-10 pr-10&quot;&gt;
+        &lt;h5 class=&quot;text-center&quot;&gt;Generated Hex Shaft&lt;/h5&gt;
+        &lt;img src=&quot;/assets/images/blog/shaft-generator/shaft-gen-example.png&quot; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This featurescript saves lots of time and saves you from some pretty uninteresting CAD work. Additionally, it reduces the amount of features in your feature tree, making it easier to both navigate and to modify.&lt;/p&gt;
+
+&lt;p&gt;Shout out to &lt;a href=&quot;https://www.chiefdelphi.com/u/dydx&quot; target=&quot;_blank&quot;&gt;Julia&lt;/a&gt; on ChiefDelphi for sharing this (and many more) featurescript.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+        <link>/blog/using-shaft-generator/</link>
+        <guid isPermaLink="true">/blog/using-shaft-generator/</guid>
+        
+        
+        <category>Onshape</category>
+        
+        <category>Featurescripts</category>
+        
+      </item>
+    
+      <item>
+        <title>Using the Lighten Featurescript</title>
+        <description>&lt;p&gt;The lighten script is yet another powerful tool you can use to cut down on the time spent per part. Additionally, it drastically reduces the amount of manual work required to nicely lighten/pocket a part.&lt;/p&gt;
+
+&lt;p&gt;Simply create a new sketch on a part, connect your load points with lines, and then use this script on the resulting sketch regions. Set your tool radius, wall thickness, and cut depth, and it pockets it for you!&lt;/p&gt;
+
+&lt;div class=&quot;row justify-content-center pb-4&quot;&gt;
+    &lt;div class=&quot;col-md-10 pr-10&quot;&gt;
+        &lt;h5 class=&quot;text-center&quot;&gt;Lightening a Plate&lt;/h5&gt;
+        &lt;img src=&quot;/assets/images/blog/lighten/lighten-fs-plate.png&quot; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I find that having the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Trim faces with part&lt;/code&gt; option selected usually results in more desirable pocketing, though it is often a case-by-case basis. If you run into issues with this script breaking after a change, or the script not liking your selections, I recommend removing your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Faces to remove&lt;/code&gt; selections using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt; and then reselecting the faces. Sometimes you’re able to notice which sketch region is breaking the script, and other times it seems to fix itself.&lt;/p&gt;
+
+&lt;p&gt;This featurescript has the possibility to dramatically speed up your workflow if used appropriately&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. The way the script is set up makes it super easy to quickly change the thickness of your walls or radius of your tool if later deemed necessary.&lt;/p&gt;
+
+&lt;p&gt;Shout out to &lt;a href=&quot;https://www.chiefdelphi.com/u/dydx&quot; target=&quot;_blank&quot;&gt;Julia&lt;/a&gt; on ChiefDelphi for sharing this (and many more) featurescript.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Despite this script doing most of the work for you, you still need to know how your part interacts with forces around it. Simply using this script and hoping it doesn’t over-lighten it is not a good mindset to have. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+        <link>/blog/using-lighten/</link>
+        <guid isPermaLink="true">/blog/using-lighten/</guid>
+        
+        
+        <category>Onshape</category>
+        
+        <category>Featurescripts</category>
+        
+      </item>
+    
+      <item>
+        <title>Using the Extrude Individual Featurescript</title>
+        <description>&lt;p&gt;Extrude Individual creates a new body for each selected section of a sketch, allowing the user to quickly create multiple parts in a single operation. This script is particularly useful if you need multiple tubes of the same height, like a drivetrain or elevator.&lt;/p&gt;
+
+&lt;p&gt;Simply create a sketch and use the script to select the desired unique sketch regions. A new part will be created for each selected section of the sketch.&lt;/p&gt;
+
+&lt;div class=&quot;row justify-content-center pb-4&quot;&gt;
+    &lt;div class=&quot;col-md-10 pr-10&quot;&gt;
+        &lt;h5 class=&quot;text-center&quot;&gt;Creating 4 Tubes in 1 Feature&lt;/h5&gt;
+        &lt;img src=&quot;/assets/images/blog/extrude-individual/extrude-individual-dt.png&quot; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This featurescript has the potential to seriously speed up your workflow if used appropriately. Furthermore, it can vastly reduce the amount of features in your feature tree, making it easier to both navigate and to modify.&lt;/p&gt;
+
+&lt;p&gt;Shout out to &lt;a href=&quot;https://www.chiefdelphi.com/u/dydx&quot; target=&quot;_blank&quot;&gt;Julia&lt;/a&gt; on ChiefDelphi for sharing this (and many more) featurescript.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+        <link>/blog/using-extrude-individual/</link>
+        <guid isPermaLink="true">/blog/using-extrude-individual/</guid>
+        
+        
+        <category>Onshape</category>
+        
+        <category>Featurescripts</category>
+        
+      </item>
+    
+      <item>
+        <title>Reducing Robot Weight - Best Practices &amp; Strategies</title>
+        <description>&lt;p&gt;A point of particular importance within the FRC space is the challenge to build within the weight limit. Despite FRC being around for more than 20 years, there is still a continual struggle with designing and building robots to be less than the designated weight limit (recently, 125 lbs). There have been numerous discussions on the topic of reducing robot weight, resulting in hundreds of different practices and strategies used by teams around the world. This blog aims to consolidate these best practices and strategies into a single document.&lt;/p&gt;
+
+&lt;ol id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#design-considerations&quot; id=&quot;markdown-toc-design-considerations&quot;&gt;&lt;u&gt;Design Considerations&lt;/u&gt;&lt;/a&gt;    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#plan-a-weight-budget-from-the-start&quot; id=&quot;markdown-toc-plan-a-weight-budget-from-the-start&quot;&gt;Plan a Weight Budget From the Start&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#monitor-the-weight-as-you-go&quot; id=&quot;markdown-toc-monitor-the-weight-as-you-go&quot;&gt;Monitor The Weight As You Go&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#mechanism-compliance&quot; id=&quot;markdown-toc-mechanism-compliance&quot;&gt;Mechanism Compliance&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#mechanisms-that-do-more-than-one-job&quot; id=&quot;markdown-toc-mechanisms-that-do-more-than-one-job&quot;&gt;Mechanisms That Do More Than One Job&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#does-this-have-functionality&quot; id=&quot;markdown-toc-does-this-have-functionality&quot;&gt;Does This Have Functionality?&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#motors--power-transmission&quot; id=&quot;markdown-toc-motors--power-transmission&quot;&gt;&lt;u&gt;Motors &amp;amp; Power Transmission&lt;/u&gt;&lt;/a&gt;    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#brushless-motors&quot; id=&quot;markdown-toc-brushless-motors&quot;&gt;Brushless Motors&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#evaluate-motor-selection&quot; id=&quot;markdown-toc-evaluate-motor-selection&quot;&gt;Evaluate Motor Selection&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#use-a-lighter-transmission-method&quot; id=&quot;markdown-toc-use-a-lighter-transmission-method&quot;&gt;Use A Lighter Transmission Method&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#drivetrain&quot; id=&quot;markdown-toc-drivetrain&quot;&gt;&lt;u&gt;Drivetrain&lt;/u&gt;&lt;/a&gt;    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#be-careful-not-to-skimp-on-your-drivetrain&quot; id=&quot;markdown-toc-be-careful-not-to-skimp-on-your-drivetrain&quot;&gt;Be Careful Not To Skimp On Your Drivetrain&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#be-mindful-of-weight-distribution&quot; id=&quot;markdown-toc-be-mindful-of-weight-distribution&quot;&gt;Be Mindful of Weight Distribution&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#pocketing&quot; id=&quot;markdown-toc-pocketing&quot;&gt;&lt;u&gt;Pocketing&lt;/u&gt;&lt;/a&gt;    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#scallop-the-edges-of-plates&quot; id=&quot;markdown-toc-scallop-the-edges-of-plates&quot;&gt;“Scallop” The Edges of Plates&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#fasteners&quot; id=&quot;markdown-toc-fasteners&quot;&gt;&lt;u&gt;Fasteners&lt;/u&gt;&lt;/a&gt;    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#use-smaller-fasteners&quot; id=&quot;markdown-toc-use-smaller-fasteners&quot;&gt;Use Smaller Fasteners&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#use-rivets&quot; id=&quot;markdown-toc-use-rivets&quot;&gt;Use Rivets&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#avoid-aluminum-fasteners&quot; id=&quot;markdown-toc-avoid-aluminum-fasteners&quot;&gt;Avoid Aluminum Fasteners&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#accurate-cad-weights&quot; id=&quot;markdown-toc-accurate-cad-weights&quot;&gt;&lt;u&gt;Accurate CAD Weights&lt;/u&gt;&lt;/a&gt;    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#have-a-complete--accurate-cad-library&quot; id=&quot;markdown-toc-have-a-complete--accurate-cad-library&quot;&gt;Have A Complete &amp;amp; Accurate CAD Library&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#assign-materials&quot; id=&quot;markdown-toc-assign-materials&quot;&gt;Assign Materials&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#smaller-is-better&quot; id=&quot;markdown-toc-smaller-is-better&quot;&gt;&lt;u&gt;Smaller is Better&lt;/u&gt;&lt;/a&gt;    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#make-your-robot-as-small-as-possible&quot; id=&quot;markdown-toc-make-your-robot-as-small-as-possible&quot;&gt;Make Your Robot As Small As Possible&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#smallest-possible-wheels-gears-belts-and-more&quot; id=&quot;markdown-toc-smallest-possible-wheels-gears-belts-and-more&quot;&gt;Smallest Possible Wheels, Gears, Belts, and More&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#gears--pulleys&quot; id=&quot;markdown-toc-gears--pulleys&quot;&gt;&lt;u&gt;Gears &amp;amp; Pulleys&lt;/u&gt;&lt;/a&gt;    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#aluminum-vs-steel-gears-depends-on-application&quot; id=&quot;markdown-toc-aluminum-vs-steel-gears-depends-on-application&quot;&gt;Aluminum vs. Steel Gears Depends on Application&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#use-pocketed-gears&quot; id=&quot;markdown-toc-use-pocketed-gears&quot;&gt;Use Pocketed Gears&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#3d-print-your-pulleys&quot; id=&quot;markdown-toc-3d-print-your-pulleys&quot;&gt;3D Print Your Pulleys&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#reduce-infill-on-3d-printed-parts-if-possible&quot; id=&quot;markdown-toc-reduce-infill-on-3d-printed-parts-if-possible&quot;&gt;Reduce Infill on 3D Printed Parts If Possible&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#pneumatics&quot; id=&quot;markdown-toc-pneumatics&quot;&gt;&lt;u&gt;Pneumatics&lt;/u&gt;&lt;/a&gt;    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#do-you-need-a-pneumatics-system&quot; id=&quot;markdown-toc-do-you-need-a-pneumatics-system&quot;&gt;Do You Need A Pneumatics System?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#use-aluminum-fittings-instead-of-brass&quot; id=&quot;markdown-toc-use-aluminum-fittings-instead-of-brass&quot;&gt;Use Aluminum Fittings Instead of Brass&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#use-an-appropriately-sized-manifold&quot; id=&quot;markdown-toc-use-an-appropriately-sized-manifold&quot;&gt;Use An Appropriately Sized Manifold&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#use-smaller-tubing&quot; id=&quot;markdown-toc-use-smaller-tubing&quot;&gt;Use Smaller Tubing&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#smaller-regulators&quot; id=&quot;markdown-toc-smaller-regulators&quot;&gt;Smaller Regulators&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#plastics&quot; id=&quot;markdown-toc-plastics&quot;&gt;&lt;u&gt;Plastics&lt;/u&gt;&lt;/a&gt;    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#does-that-part-need-to-be-metal&quot; id=&quot;markdown-toc-does-that-part-need-to-be-metal&quot;&gt;Does That Part Need to be Metal?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#low-load-plastics-can-be-very-thin&quot; id=&quot;markdown-toc-low-load-plastics-can-be-very-thin&quot;&gt;Low Load Plastics Can Be Very Thin&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#shafts--intakes&quot; id=&quot;markdown-toc-shafts--intakes&quot;&gt;&lt;u&gt;Shafts &amp;amp; Intakes&lt;/u&gt;&lt;/a&gt;    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#consider-the-necessary-size-of-your-hex-axles&quot; id=&quot;markdown-toc-consider-the-necessary-size-of-your-hex-axles&quot;&gt;Consider the Necessary Size of Your Hex Axles&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#optimize-your-intake-hardware&quot; id=&quot;markdown-toc-optimize-your-intake-hardware&quot;&gt;Optimize Your Intake Hardware&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#utilize-bushings-in-place-of-bearings&quot; id=&quot;markdown-toc-utilize-bushings-in-place-of-bearings&quot;&gt;Utilize Bushings In Place Of Bearings&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#tube-wall-thicknesses&quot; id=&quot;markdown-toc-tube-wall-thicknesses&quot;&gt;&lt;u&gt;Tube Wall Thicknesses&lt;/u&gt;&lt;/a&gt;    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#use-116-wall-instead-of--wall&quot; id=&quot;markdown-toc-use-116-wall-instead-of--wall&quot;&gt;Use 1/16” Wall Instead of ⅛” Wall&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#electrical&quot; id=&quot;markdown-toc-electrical&quot;&gt;&lt;u&gt;Electrical&lt;/u&gt;&lt;/a&gt;    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#try-to-keep-the-battery-main-breaker-and-pdp-close-to-each-other&quot; id=&quot;markdown-toc-try-to-keep-the-battery-main-breaker-and-pdp-close-to-each-other&quot;&gt;Try to keep the battery, main breaker, and PDP close to each other.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#weighing-in&quot; id=&quot;markdown-toc-weighing-in&quot;&gt;Weighing In&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#credits&quot; id=&quot;markdown-toc-credits&quot;&gt;Credits&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#missing-something&quot; id=&quot;markdown-toc-missing-something&quot;&gt;Missing Something?&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;design-considerations&quot;&gt;&lt;u&gt;Design Considerations&lt;/u&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;plan-a-weight-budget-from-the-start&quot;&gt;Plan a Weight Budget From the Start&lt;/h3&gt;
+&lt;p&gt;Right from the beginning, your team should discuss and create a weight budget for your robot - X pounds for the drivetrain, X pounds for this sub-system, so on and so forth (including your control system!). When doing this, give yourself an allowance of 5-10 pounds as weight seems to sneak out of nowhere sometimes.&lt;/p&gt;
+
+&lt;h3 id=&quot;monitor-the-weight-as-you-go&quot;&gt;Monitor The Weight As You Go&lt;/h3&gt;
+&lt;p&gt;As you progress through the design and build process, continue to think about lightness at every step and weigh as you go. If you only realize you’re overweight once your robot is assembled, it’s often too late to make any meaningful changes.&lt;/p&gt;
+
+&lt;h3 id=&quot;mechanism-compliance&quot;&gt;Mechanism Compliance&lt;/h3&gt;
+&lt;p&gt;Does this mechanism need to be rigid or can it compliantly bend when it hits something? If applicable, make your mechanisms flex more by having more compliance (polycarbonate). Energy is force times distance so if you can increase the distance your part deforms, you resultantly decrease the force the part must withstand from an impact. Oftentimes compliant mechanisms end up being lighter than very rigid mechanisms due to material selection.&lt;/p&gt;
+
+&lt;h3 id=&quot;mechanisms-that-do-more-than-one-job&quot;&gt;Mechanisms That Do More Than One Job&lt;/h3&gt;
+&lt;p&gt;If your team is capable of something like this, think about designing a mechanism to do more than one task - a lot of this time this ends up saving some weight. Examples of multitasking mechanisms include elevators doubling as climbers in 2018 (254) as well as intake climbers in 2019 (2056).&lt;/p&gt;
+
+&lt;h3 id=&quot;does-this-have-functionality&quot;&gt;Does This Have Functionality?&lt;/h3&gt;
+&lt;p&gt;Reduce or completely eliminate things on your robot that don’t have a competitive function. Some expectations to this point are things like sponsor stickers or powdercoat (because who doesn’t like to look good?).&lt;/p&gt;
+
+&lt;h2 id=&quot;motors--power-transmission&quot;&gt;&lt;u&gt;Motors &amp;amp; Power Transmission&lt;/u&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;brushless-motors&quot;&gt;Brushless Motors&lt;/h3&gt;
+&lt;p&gt;If your team can afford them, use them wherever possible. By switching a CIM with a NEO you save 1.85 pounds - that’s enough to make or break an important mechanism.&lt;/p&gt;
+
+&lt;h3 id=&quot;evaluate-motor-selection&quot;&gt;Evaluate Motor Selection&lt;/h3&gt;
+&lt;p&gt;It doesn’t matter if you choose to use a lightweight motor if you end up needing a heavy gearbox. Typically, the less reduction required the better.&lt;/p&gt;
+
+&lt;h3 id=&quot;use-a-lighter-transmission-method&quot;&gt;Use A Lighter Transmission Method&lt;/h3&gt;
+&lt;p&gt;Instead of using a fairly hefty 3:1 VersaPlanetary, you could probably save quite a bit of weight by simply using a 3:1 belt reduction from the motor to the output.&lt;/p&gt;
+
+&lt;h2 id=&quot;drivetrain&quot;&gt;&lt;u&gt;Drivetrain&lt;/u&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;be-careful-not-to-skimp-on-your-drivetrain&quot;&gt;Be Careful Not To Skimp On Your Drivetrain&lt;/h3&gt;
+&lt;p&gt;If there was a place to lighten the least, it would be your drivetrain. Arguably the most important mechanism on your robot, you really want to ensure that your drivetrain can hold up under a competition setting. With that being said, teams have had success using 1/16” wall tubing for their front and back rails. I would say this decision varies from game to game; if it’s a game where defense is relentless (2019) and you’re going to be receiving a lot of that, maybe it’s best to stick to ⅛” wall.&lt;/p&gt;
+
+&lt;h3 id=&quot;be-mindful-of-weight-distribution&quot;&gt;Be Mindful of Weight Distribution&lt;/h3&gt;
+&lt;p&gt;In addition to creating a robust drivetrain, you should also be thinking about the weight distribution of your robot. A lot of weight &lt;em&gt;above&lt;/em&gt; the drivetrain with very little weight &lt;em&gt;on&lt;/em&gt; the drivetrain is a surefire way to tip mid match. A top heavy robot with a fragile chassis is often an inadvertent oversight so it’s best to be thinking about this throughout the design process.&lt;/p&gt;
+
+&lt;h2 id=&quot;pocketing&quot;&gt;&lt;u&gt;Pocketing&lt;/u&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;scallop-the-edges-of-plates&quot;&gt;“Scallop” The Edges of Plates&lt;/h3&gt;
+&lt;p&gt;By removing unnecessary attachment points between plates and what it’s providing rigidity to, you can end up saving quite a bit of weight. Be mindful when doing this however - assess where material can be removed and how much can be removed (this comes with experience as well). Between the removal of material and the reduced amount of fasteners needed to attach the plate, this is a win-win if done correctly.&lt;/p&gt;
+&lt;div class=&quot;row justify-content-center pb-4&quot;&gt;
+    &lt;div class=&quot;col-md-7&quot;&gt;
+        &lt;h5 class=&quot;text-center&quot;&gt;Code Orange Pocketing&lt;/h5&gt;
+        &lt;img src=&quot;/assets/images/blog/reducing-robot-weight/code-o-scallop.jpeg&quot; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;fasteners&quot;&gt;&lt;u&gt;Fasteners&lt;/u&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;use-smaller-fasteners&quot;&gt;Use Smaller Fasteners&lt;/h3&gt;
+&lt;p&gt;Where you can, use smaller fasteners. Using 10-32 bolts instead of ¼-20 bolts in numerous places will end up freeing up some weight.&lt;/p&gt;
+
+&lt;h3 id=&quot;use-rivets&quot;&gt;Use Rivets&lt;/h3&gt;
+&lt;p&gt;Aluminum rivets instead of bolts in low-load connections saves, surprisingly, plenty of weight.&lt;/p&gt;
+
+&lt;h3 id=&quot;avoid-aluminum-fasteners&quot;&gt;Avoid Aluminum Fasteners&lt;/h3&gt;
+&lt;p&gt;Aluminum threaded fasteners are probably better left off of robots, as they’re easy to over-torque and break. If you do need them for whatever reason, use them for only large hardware with coarse threads and handle them with care.&lt;/p&gt;
+
+&lt;h2 id=&quot;accurate-cad-weights&quot;&gt;&lt;u&gt;Accurate CAD Weights&lt;/u&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;have-a-complete--accurate-cad-library&quot;&gt;Have A Complete &amp;amp; Accurate CAD Library&lt;/h3&gt;
+&lt;p&gt;Besides being a great organizational habit and time saver, a complete and accurate CAD library with correct weights will make your designers’ job a whole lot easier. Not having to manually enter the weights of COTS parts or simply guessing the weight of a mechanism can effectively guide your design team into making better, more informed decisions. Some already existing CAD libraries include &lt;a href=&quot;https://workbench.grabcad.com/workbench/projects/gczMZ2vZJYlzPJlob9wznnuhi1uqUhYIRx23KRz0l5Gq_g#/space/gcmegFZmFlpCU6pC0lOikiembdYGx3tphi11JfHJ0THJkK/folder/1357747&quot;&gt;Spectrum’s CAD Library&lt;/a&gt; and &lt;a href=&quot;https://www.chiefdelphi.com/t/mkcad-2020-season-updates/367821&quot;&gt;MKCad&lt;/a&gt; for Onshape.&lt;/p&gt;
+
+&lt;h3 id=&quot;assign-materials&quot;&gt;Assign Materials&lt;/h3&gt;
+&lt;p&gt;In addition to a complete CAD library, it is highly recommended to put forth effort in assigning materials to all of your parts (plates, tubes, etc.). Your drivetrain CAD weight won’t be accurate if your tubes and plates aren’t assigned to a proper aluminum material. With all that said, leave yourself a buffer - a 125 pound robot in CAD will &lt;em&gt;not&lt;/em&gt; weigh 125 pounds in real life, no matter how accurate your CAD weights are.&lt;/p&gt;
+
+&lt;h2 id=&quot;smaller-is-better&quot;&gt;&lt;u&gt;Smaller is Better&lt;/u&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;make-your-robot-as-small-as-possible&quot;&gt;Make Your Robot As Small As Possible&lt;/h3&gt;
+&lt;p&gt;As a consequence of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Square%E2%80%93cube_law&quot;&gt;square-cube law&lt;/a&gt;, shaving off even a couple of inches from your frame perimeter can make a world of difference in the long run. This isn’t to say that you should sacrifice mechanisms because you’ve set the length and width of your robot too small from the get-go - don’t do this.&lt;/p&gt;
+
+&lt;h3 id=&quot;smallest-possible-wheels-gears-belts-and-more&quot;&gt;Smallest Possible Wheels, Gears, Belts, and More&lt;/h3&gt;
+&lt;p&gt;Using 6” wheels when you can instead use 3-4” wheels is a bigger waste of weight than most may realize. Smaller wheels are not only lighter, but they also require less of a gear reduction for the same effective robot speed. The combination of six to eight lighter wheels and a lighter reduction makes a big difference in robot weight. This principle applies to numerous other types of hardware, including gears. If you need a 2:1 gear reduction, don’t use a 40t gear and an 80t gear unless it’s necessary. This sounds obvious, yet I’ve had plenty of firsthand experiences with silly mistakes like this.&lt;/p&gt;
+
+&lt;h2 id=&quot;gears--pulleys&quot;&gt;&lt;u&gt;Gears &amp;amp; Pulleys&lt;/u&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;aluminum-vs-steel-gears-depends-on-application&quot;&gt;Aluminum vs. Steel Gears Depends on Application&lt;/h3&gt;
+&lt;p&gt;Using aluminum gears instead of steel gears is an acceptable practice in many applications and saves a large amount of weight. However, it is highly, highly recommended NOT to use aluminum gears in drivetrain assemblies. Additionally, I recommend, as a team, deciding what tooth count gears are acceptable for aluminum and which are not (example: aluminum gears above 24t, steel gears below 24t).&lt;/p&gt;
+
+&lt;h3 id=&quot;use-pocketed-gears&quot;&gt;Use Pocketed Gears&lt;/h3&gt;
+&lt;p&gt;Whether it be spending the extra $3 on &lt;a href=&quot;https://www.wcproducts.com/pocketed-gears&quot;&gt;WCP&lt;/a&gt; or doing it yourself, use pocketed gears when possible. Pocketed gears can save quite a lot of weight, especially when you get into the high tooth count gears. 971’s 2016 robot saved about 2 pounds by lightening their gears.&lt;/p&gt;
+
+&lt;h3 id=&quot;3d-print-your-pulleys&quot;&gt;3D Print Your Pulleys&lt;/h3&gt;
+&lt;p&gt;In many cases you are able to use your own 3D printed pulleys. In addition to the weight and money savings, printed pulleys result in a lot more freedom design-wise. Integrating designs and creative uses often become a great deal easier with your own printed pulleys.&lt;/p&gt;
+
+&lt;h3 id=&quot;reduce-infill-on-3d-printed-parts-if-possible&quot;&gt;Reduce Infill on 3D Printed Parts If Possible&lt;/h3&gt;
+&lt;p&gt;This one isn’t likely to save a whole lot of pounds but is still an important consideration when printing parts. The number of walls you have will generally have a greater impact on part strength than infill will - for more information, check out Markforged’s Article: &lt;a href=&quot;https://markforged.com/resources/learn/design-for-additive-manufacturing-plastics-composites/understanding-3d-printing-strength/3d-printing-settings-impacting-part-strength&quot;&gt;3D Printing Settings Impacting Part Strength&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;pneumatics&quot;&gt;&lt;u&gt;Pneumatics&lt;/u&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;do-you-need-a-pneumatics-system&quot;&gt;Do You Need A Pneumatics System?&lt;/h3&gt;
+&lt;p&gt;Discarding pneumatics completely is a bold but often redeeming move. Getting rid of pneumatic systems drastically reduces weight, however sometimes a well positioned piston can accomplish things lighter and better than motors. Ultimately, this decision will vary from team to team - some use pneumatics galore while others rarely do.&lt;/p&gt;
+
+&lt;h3 id=&quot;use-aluminum-fittings-instead-of-brass&quot;&gt;Use Aluminum Fittings Instead of Brass&lt;/h3&gt;
+&lt;p&gt;Wherever possible, use aluminum fittings instead of brass.&lt;/p&gt;
+
+&lt;h3 id=&quot;use-an-appropriately-sized-manifold&quot;&gt;Use An Appropriately Sized Manifold&lt;/h3&gt;
+&lt;p&gt;Using an unnecessarily large manifold is a silly yet common mistake that can cost you a fair amount of weight. If you know you need 2 cylinders, perhaps acquire a 3 port base; a one port buffer is good for later (expected or unexpected) additions.&lt;/p&gt;
+
+&lt;h3 id=&quot;use-smaller-tubing&quot;&gt;Use Smaller Tubing&lt;/h3&gt;
+&lt;p&gt;In some applications, give some thought to using smaller pneumatic tubing. Smaller fittings and tubing provides a nonzero weight reduction, especially if you end up having long tube runs (which is often the case).&lt;/p&gt;
+
+&lt;h3 id=&quot;smaller-regulators&quot;&gt;Smaller Regulators&lt;/h3&gt;
+&lt;p&gt;Try to avoid using the huge pressure gauges and inline pressure regulators that the KOP comes with. Automation Direct has smaller and lighter push-to-connect variants available &lt;a href=&quot;https://www.automationdirect.com/adc/shopping/catalog/pneumatic_components/special_purpose_pneumatic_fittings/pressure_regulators_-z-_gauges_-z-_indicators&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;plastics&quot;&gt;&lt;u&gt;Plastics&lt;/u&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;does-that-part-need-to-be-metal&quot;&gt;Does That Part Need to be Metal?&lt;/h3&gt;
+&lt;p&gt;A lot of people would be stunned at how much polycarbonate is used on a lot of great robots. Not everything needs to be metal and, in fact, polycarbonate works better than aluminum plates in many applications. Specifically if your mechanism needs to survive hits, it is much easier to build the mechanism to simply bend out of the way with polycarbonate than it is to build the mechanism to survive without yielding with aluminum.&lt;/p&gt;
+
+&lt;h3 id=&quot;low-load-plastics-can-be-very-thin&quot;&gt;Low Load Plastics Can Be Very Thin&lt;/h3&gt;
+&lt;p&gt;For robots with large surface areas of low load plastic sheets, switch to thinner plastic. For example, &lt;a href=&quot;https://www.wcproducts.com/systems-structures/framing-material/polycarbonate/polycarbonate&quot;&gt;WCP’s 1/32” polycarbonate&lt;/a&gt; is great for things like sponsor panels and hopper walls.&lt;/p&gt;
+
+&lt;h2 id=&quot;shafts--intakes&quot;&gt;&lt;u&gt;Shafts &amp;amp; Intakes&lt;/u&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;consider-the-necessary-size-of-your-hex-axles&quot;&gt;Consider the Necessary Size of Your Hex Axles&lt;/h3&gt;
+&lt;p&gt;Does that hex shaft really need to be .5”, or can you instead use .375” hex? Often people &amp;amp; teams get into the habit of defaulting every hex shaft to .5” when in reality .375” would work in many circumstances.&lt;/p&gt;
+
+&lt;h3 id=&quot;optimize-your-intake-hardware&quot;&gt;Optimize Your Intake Hardware&lt;/h3&gt;
+&lt;p&gt;Intakes often span the width of your robot, resulting in some pretty long axles and rollers. To further the above point on the size of your shafts - also evaluate the lengths. If constructing an intake out of round tube rollers, use hubs or a dead axle at the ends of the roller to get rid of the unused middle portion of the hex shaft. If the intake allows for it, use smaller and thinner roller tubes; same thing with wheels - if possible, use smaller and fewer wheels.&lt;/p&gt;
+
+&lt;h3 id=&quot;utilize-bushings-in-place-of-bearings&quot;&gt;Utilize Bushings In Place Of Bearings&lt;/h3&gt;
+&lt;p&gt;Use bushings instead of bearings in low rotary points as they are typically lighter and smaller than bearings. Use case examples include intake pivots and one time use mechanisms.&lt;/p&gt;
+
+&lt;h2 id=&quot;tube-wall-thicknesses&quot;&gt;&lt;u&gt;Tube Wall Thicknesses&lt;/u&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;use-116-wall-instead-of--wall&quot;&gt;Use 1/16” Wall Instead of ⅛” Wall&lt;/h3&gt;
+&lt;p&gt;Many people and teams have this preconceived notion that 1/16” wall tubing is rarely applicable because it’s too thin and that ⅛” wall is simply just better. In reality, ⅛” wall is necessary for only a small portion of FRC applications; this includes, but is not limited to, superstructures and drivetrains (even some capable teams’ drivetrains are 1/16” wall tubing today). To compare the strength and weight savings of 1/16” vs ⅛” wall tubing, see the below &lt;a href=&quot;https://www.chiefdelphi.com/t/how-does-your-team-reduce-weight-on-your-robot/386347/101?u=jacktervay&quot;&gt;FEA analysis done by @JamesCH95&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&quot;row justify-content-center pb-3&quot;&gt;
+    &lt;div class=&quot;col-md-11&quot;&gt;
+        &lt;img src=&quot;/assets/images/blog/reducing-robot-weight/tube-fea.png&quot; /&gt;
+        &lt;p class=&quot;text-center&quot; style=&quot;font-size:90%&quot;&gt;&quot;&lt;i&gt;⅛” walled tube with the same linear density (weight per unit length) as a 1/16” walled tube. The 1/16” wall tube was substantially stronger because it is not riddled with stress concentrators. Something like 2-4x as strong.&lt;/i&gt;&quot;&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Additionally, thinner walled tubing is generally cheaper and the cost is certainly lower since you don’t need to machine it a lot like you might with ⅛” wall.&lt;/p&gt;
+
+&lt;p&gt;⅛” wall tubing still does have its uses however. It is advantageous to use ⅛” wall if you need to clamp or tap the tube wall for a bolt. Furthermore, you don’t need to be as nervous about crushing ⅛” wall when bolting through it.&lt;/p&gt;
+
+&lt;h2 id=&quot;electrical&quot;&gt;&lt;u&gt;Electrical&lt;/u&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;try-to-keep-the-battery-main-breaker-and-pdp-close-to-each-other&quot;&gt;Try to keep the battery, main breaker, and PDP close to each other.&lt;/h3&gt;
+&lt;p&gt;This reduces the length of large gauge wire that needs to travel between these components. Wire weight is nontrivial and adds up quickly - try to minimize the length of your wire runs, especially for larger gauge wire. Keeping wires runs short is also just a generally good practice, as transmitted power diminishes over distance.&lt;/p&gt;
+
+&lt;h2 id=&quot;weighing-in&quot;&gt;Weighing In&lt;/h2&gt;
+&lt;p&gt;As obvious as it sounds - make sure to remove your battery and bumpers from your robot before you weigh it. I’ve experienced this last minute “we’re over the weight limit” panic a couple of times - and a nonzero amount of these occurrences can be attributed to this silly mistake.&lt;/p&gt;
+
+&lt;h2 id=&quot;credits&quot;&gt;Credits&lt;/h2&gt;
+&lt;p&gt;The majority of the content in this post is from the discussion on &lt;a href=&quot;https://www.chiefdelphi.com/t/how-does-your-team-reduce-weight-on-your-robot/386347&quot;&gt;this ChiefDelphi&lt;/a&gt; thread and what I could think of. Thank you to everyone who contributed to this insightful conversation - many of you delivered your two cents better than I could’ve (that’s why you might notice almost a direct ctrl-c ctrl-v of your comment!).&lt;/p&gt;
+
+&lt;h2 id=&quot;missing-something&quot;&gt;Missing Something?&lt;/h2&gt;
+&lt;p&gt;If I forgot to mention something that you think would fit well into this blog, please don’t hesitate to contact me - this goes for any mistakes you think I may have made!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 30 Sep 2020 00:00:00 +0000</pubDate>
+        <link>/blog/reducing-robot-weight/</link>
+        <guid isPermaLink="true">/blog/reducing-robot-weight/</guid>
+        
+        
+        <category>Design</category>
+        
+      </item>
+    
+      <item>
+        <title>Using the TubeConverter Featurescript</title>
+        <description>&lt;p&gt;This blog will walk you though using one of the most powerful featurescripts, the TubeConverter. This script is a real game changer for how quickly you can design parts, especially if you use a common hole pattern on your box tubing. Simply extrude the outer dimensions of your tube then use this script to shell out the internals and add in any common hole patterns.&lt;/p&gt;
+
+&lt;p&gt;There are configurations for many important parameters like wall thickness and what kind of hole pattern you want. There are a few major types of hole pattern which are named for either the VexPro versaframe system or patterns used by teams. Two examples of slightly different patterns are shown below. Each one also has the option to add in a center row of holes.&lt;/p&gt;
+
+&lt;div class=&quot;row justify-content-center&quot;&gt;
+    &lt;div class=&quot;col-md-5 pr-5&quot;&gt;
+        &lt;h5 class=&quot;text-center&quot;&gt;1678 Pattern&lt;/h5&gt;
+        &lt;img src=&quot;/assets/images/blog/TubeConverter1678.png&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-5 pr-5&quot;&gt;
+        &lt;h5 class=&quot;text-center&quot;&gt;4414/1323/973 Pattern&lt;/h5&gt;
+        &lt;img src=&quot;/assets/images/blog/TubeConverter4414.png&quot; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The user can also configure the hole size and offsets from one of the sides if you don’t want it to be centered by default. It is also possible to exclude certain faces from the hole pattern if needed.&lt;/p&gt;
+
+&lt;p&gt;This featurescript has the possibility to speed up your workflow significantly if used right. It is also nice as it combines many operations into one feature to keep your feature bar clear and easier to see when you have to come back to modify something. This workflow is most powerful when you use a standardized build system with a precut pattern across most of your parts.&lt;/p&gt;
+
+&lt;p&gt;Shout out to &lt;a href=&quot;https://www.chiefdelphi.com/u/dydx&quot; target=&quot;_blank&quot;&gt;Julia&lt;/a&gt; on ChiefDelphi for sharing this (and many more) featurescript.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 29 Jul 2020 00:00:00 +0000</pubDate>
+        <link>/blog/using-tube-converter/</link>
+        <guid isPermaLink="true">/blog/using-tube-converter/</guid>
+        
+        
+        <category>Onshape</category>
+        
+        <category>Featurescripts</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome to Onshape4FRC</title>
+        <description>&lt;p&gt;Welcome to our new blog. During the process of switching over from Solidworks to Onshape 6328 had to create various materials for teaching our students (and some mentors). In doing this we realized there are tons of resources out there but they can sometimes be hard to find. This website aims to address those issues and give teams starting out with or teaching new members in Onshape a place to start.&lt;/p&gt;
+
+&lt;p&gt;The getting started page walks though the process which can be useful for people creating a new account. When using Onshape there are a lot of useful parts libraries and automated features, but they require some setup. This page has instructions to follow to link our recommended libraries to your account. Onshape also has various tutorials to help people new to CAD or Onshape in general. The last part of this page lists off some of the most important ones to learn the basics.&lt;/p&gt;
+
+&lt;p&gt;The cad library page walks you through a lot of the things you linked in the getting started step. MKCad is a library of COTS parts which make assemblies with off the shelf components very easy. After linking the documents you can take advantage of updates with new parts due to the huge community support. Featurescripts also provide a lot of very useful custom features which can speed up and simplify the process of cadding for FRC.&lt;/p&gt;
+
+&lt;p&gt;External resources is a collection of tutorial series created by other community members. These videos are a great resource for more advanced design concepts after you learn the basics of using a cad program. We’re always looking for more great examples to add to this page.&lt;/p&gt;
+
+&lt;p&gt;The last main section is this blog. The blog posts will cover various topics focusing on teaching different methods and techniques for designing in FRC. This will be a growing resource as we find more concepts to cover in the process of our training.&lt;/p&gt;
+
+&lt;p&gt;We hope you find this website useful. If you have any feedback or used any of these materials with your team we’d love to hear from you!&lt;/p&gt;
+
+&lt;p&gt;-Max&lt;/p&gt;
+
+&lt;h2 id=&quot;enjoy-our-favorite-video&quot;&gt;Enjoy our favorite video&lt;/h2&gt;
+
+&lt;p&gt;&lt;iframe style=&quot;width:100%;&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/3TdPBB9Z_cs&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 26 Jul 2020 00:00:00 +0000</pubDate>
+        <link>/blog/welcome/</link>
+        <guid isPermaLink="true">/blog/welcome/</guid>
+        
+        
+        <category>Onshape</category>
+        
+        <category>Announcements</category>
+        
+      </item>
+    
+  </channel>
+</rss>

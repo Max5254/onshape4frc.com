@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="/assets/images/favicon.png">
+
+    <title>Using the TubeConverter Featurescript | Onshape4FRC</title>
+
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Using the TubeConverter Featurescript | Onshape4FRC</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Using the TubeConverter Featurescript" />
+<meta name="author" content="Max Westwater" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This blog will walk you though using one of the most powerful featurescripts, the TubeConverter. This script is a real game changer for how quickly you can design parts, especially if you use a common hole pattern on your box tubing. Simply extrude the outer dimensions of your tube then use this script to shell out the internals and add in any common hole patterns." />
+<meta property="og:description" content="This blog will walk you though using one of the most powerful featurescripts, the TubeConverter. This script is a real game changer for how quickly you can design parts, especially if you use a common hole pattern on your box tubing. Simply extrude the outer dimensions of your tube then use this script to shell out the internals and add in any common hole patterns." />
+<meta property="og:site_name" content="Onshape4FRC" />
+<meta property="og:image" content="/assets/images/blog/tubes.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-07-29T00:00:00+00:00" />
+<script type="application/ld+json">
+{"description":"This blog will walk you though using one of the most powerful featurescripts, the TubeConverter. This script is a real game changer for how quickly you can design parts, especially if you use a common hole pattern on your box tubing. Simply extrude the outer dimensions of your tube then use this script to shell out the internals and add in any common hole patterns.","url":"/blog/using-tube-converter/","@type":"BlogPosting","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/assets/images/onshape4frc-logo.png"},"name":"Max Westwater"},"headline":"Using the TubeConverter Featurescript","dateModified":"2020-07-29T00:00:00+00:00","datePublished":"2020-07-29T00:00:00+00:00","image":"/assets/images/blog/tubes.png","mainEntityOfPage":{"@type":"WebPage","@id":"/blog/using-tube-converter/"},"author":{"@type":"Person","name":"Max Westwater"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link href="/assets/css/screen.css" rel="stylesheet">
+
+    <link href="/assets/css/main.css" rel="stylesheet">
+
+
+</head>
+
+
+
+<body class="layout-post">
+    <!-- defer loading of font and font awesome -->
+    <noscript id="deferred-styles">
+        <link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+            integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    </noscript>
+
+
+    <!-- Begin Menu Navigation
+================================================== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+        <div class="container pr-0">
+
+            <!-- Begin Logo -->
+            <a class="navbar-brand" href="/">
+                <h1 class="sitetitle">Onshape4FRC</h1>
+            </a>
+            <!-- End Logo -->
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMediumish">
+
+                <!-- Begin Menu -->
+
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog">Blog</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/getting-started">Getting Started</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/calculators">Calculators</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cad-library">CAD Library</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/external-resources">External Resources</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="/contribute">Contribute</a>
+                    </li> -->
+
+                    <!-- <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/"> Docs</a>
+                </li> -->
+
+                    <!-- <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://github.com/wowthemesnet/mediumish-theme-jekyll"><i class="fab fa-github"></i> Fork on Github</a>
+                </li> -->
+
+                    <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+                </ul>
+
+                <!-- End Menu -->
+
+            </div>
+
+        </div>
+    </nav>
+    <!-- End Navigation
+================================================== -->
+
+    <div class="site-content">
+
+        <div class="container">
+
+            <!-- Site Title
+================================================== -->
+            <div class="mainheading">
+                <p class="lead">
+                    Onshape CAD and Design resources to help teach for FRC.
+                </p>
+            </div>
+
+            <!-- Content
+================================================== -->
+            <div class="main-content">
+                <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share sticky-top sticky-top-offset">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://twitter.com/intent/tweet?text=Using the TubeConverter Featurescript&url=/blog/using-tube-converter/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://facebook.com/sharer.php?u=/blog/using-tube-converter/" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+
+        <!-- <li class="ml-1 mr-1">
+            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=/blog/using-tube-converter/" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li> -->
+
+    </ul>
+    
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+        
+        <img class="author-thumb" src="https://www.chiefdelphi.com/user_avatar/www.chiefdelphi.com/maximillian/120/146348_2.png" alt="Max Westwater">
+        
+    </div>
+    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+        <a target="_blank" class="link-dark" >Max Westwater</a><a target="_blank" href="https://www.chiefdelphi.com/u/maximillian/summary"
+            class="btn cd">CD</a>
+        <br />
+        <span class="author-description"><b>Team:</b> 6328/5254</span>
+        <br />
+        <span class="author-description">The lead silver medalist.</span>
+    </div>
+</div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">Using the TubeConverter Featurescript</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image -->
+            
+
+            
+            <img class="featured-image img-fluid"
+                src="/assets/images/blog/tubes.png"
+                alt="Using the TubeConverter Featurescript">
+            
+
+            
+            <!-- End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <p>This blog will walk you though using one of the most powerful featurescripts, the TubeConverter. This script is a real game changer for how quickly you can design parts, especially if you use a common hole pattern on your box tubing. Simply extrude the outer dimensions of your tube then use this script to shell out the internals and add in any common hole patterns.</p>
+
+<p>There are configurations for many important parameters like wall thickness and what kind of hole pattern you want. There are a few major types of hole pattern which are named for either the VexPro versaframe system or patterns used by teams. Two examples of slightly different patterns are shown below. Each one also has the option to add in a center row of holes.</p>
+
+<div class="row justify-content-center">
+    <div class="col-md-5 pr-5">
+        <h5 class="text-center">1678 Pattern</h5>
+        <img src="/assets/images/blog/TubeConverter1678.png" />
+    </div>
+    <div class="col-md-5 pr-5">
+        <h5 class="text-center">4414/1323/973 Pattern</h5>
+        <img src="/assets/images/blog/TubeConverter4414.png" />
+    </div>
+</div>
+
+<p>The user can also configure the hole size and offsets from one of the sides if you don’t want it to be centered by default. It is also possible to exclude certain faces from the hole pattern if needed.</p>
+
+<p>This featurescript has the possibility to speed up your workflow significantly if used right. It is also nice as it combines many operations into one feature to keep your feature bar clear and easier to see when you have to come back to modify something. This workflow is most powerful when you use a standardized build system with a precut pattern across most of your parts.</p>
+
+<p>Shout out to <a href="https://www.chiefdelphi.com/u/dydx" target="_blank">Julia</a> on ChiefDelphi for sharing this (and many more) featurescript.</p>
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+                <small>
+                    <span class="post-date"><time class="post-date"
+                            datetime="2020-07-29">29 Jul 2020</time></span>
+                    
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll"
+                            href="/categories#Featurescripts">Featurescripts</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll"
+                            href="/categories#Onshape">Onshape</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+                
+                <a class="prev d-block col-md-6" href="/blog/welcome/"> &laquo; Welcome to Onshape4FRC</a>
+                
+                
+                <a class="next d-block col-md-6 text-lg-right" href="/blog/reducing-robot-weight/">Reducing Robot Weight - Best Practices & Strategies &raquo; </a>
+                
+                <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Begin Comments
+================================================== -->
+
+<!--End Comments
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+            </div>
+
+            
+
+        </div>
+
+        <!-- Begin Footer
+================================================== -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                        <!-- Copyright © 2021 Onshape4FRC -->
+                        Built by Max Westwater of FRC 6328
+                    </div>
+                    <div class="col-md-6 col-sm-6 text-center text-lg-right">
+                        <a href="/privacy">Privacy Information</a> |
+                        Built using the
+                        <a target="_blank" href="https://github.com/wowthemesnet/mediumish-theme-jekyll">Mediumish
+                            Jekyll Theme</a>.
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer
+================================================== -->
+
+    </div> <!-- /.site-content -->
+
+    <!-- Scripts
+================================================== -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script src="/assets/js/mediumish.js"></script>
+
+    
+
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    
+    <script id="dsq-count-scr" src="//demowebsite.disqus.com/count.js"></script>
+    
+
+    <style>
+    #cookie-notice {padding: 0.5rem 1rem; display: none; text-align: center; position: fixed; bottom: 0; width: calc(100% - 2rem); background: #222; color: rgba(255,255,255,0.8);}
+    #cookie-notice a {display: inline-block; cursor: pointer; margin-left: 0.5rem;}
+    @media (max-width: 767px) {
+        #cookie-notice span {display: block; padding-top: 3px; margin-bottom: 1rem;}
+        #cookie-notice a {position: relative; bottom: 4px;}
+    }
+</style>
+<div id="cookie-notice"><span>We would like to use third party cookies and scripts to improve the functionality of this website.</span><a id="cookie-notice-accept" class="btn btn-primary btn-sm">Approve</a><a href="/privacy" class="btn btn-primary btn-sm">More info</a></div>
+<script>
+    function createCookie(name,value,days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+    function eraseCookie(name) {
+        createCookie(name,"",-1);
+    }
+
+    
+        if(readCookie('cookie-notice-dismissed')=='true') {
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', '${{ secrets.GOOGLE_ANALYTICS }}', 'auto');
+            ga('send', 'pageview');
+        } else {
+            document.getElementById('cookie-notice').style.display = 'block';
+        }
+    
+    document.getElementById('cookie-notice-accept').addEventListener("click",function() {
+        createCookie('cookie-notice-dismissed','true',31);
+        document.getElementById('cookie-notice').style.display = 'none';
+        location.reload();
+    });
+
+</script>
+
+</body>
+
+</html>

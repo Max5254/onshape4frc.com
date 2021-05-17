@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="/assets/images/favicon.png">
+
+    <title>Reducing Robot Weight - Best Practices & Strategies | Onshape4FRC</title>
+
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Reducing Robot Weight - Best Practices &amp; Strategies | Onshape4FRC</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Reducing Robot Weight - Best Practices &amp; Strategies" />
+<meta name="author" content="Jack Tervay" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A point of particular importance within the FRC space is the challenge to build within the weight limit. Despite FRC being around for more than 20 years, there is still a continual struggle with designing and building robots to be less than the designated weight limit (recently, 125 lbs). There have been numerous discussions on the topic of reducing robot weight, resulting in hundreds of different practices and strategies used by teams around the world. This blog aims to consolidate these best practices and strategies into a single document." />
+<meta property="og:description" content="A point of particular importance within the FRC space is the challenge to build within the weight limit. Despite FRC being around for more than 20 years, there is still a continual struggle with designing and building robots to be less than the designated weight limit (recently, 125 lbs). There have been numerous discussions on the topic of reducing robot weight, resulting in hundreds of different practices and strategies used by teams around the world. This blog aims to consolidate these best practices and strategies into a single document." />
+<meta property="og:site_name" content="Onshape4FRC" />
+<meta property="og:image" content="/assets/images/blog/reducing-robot-weight/cover-image.jpeg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-09-30T00:00:00+00:00" />
+<script type="application/ld+json">
+{"description":"A point of particular importance within the FRC space is the challenge to build within the weight limit. Despite FRC being around for more than 20 years, there is still a continual struggle with designing and building robots to be less than the designated weight limit (recently, 125 lbs). There have been numerous discussions on the topic of reducing robot weight, resulting in hundreds of different practices and strategies used by teams around the world. This blog aims to consolidate these best practices and strategies into a single document.","url":"/blog/reducing-robot-weight/","@type":"BlogPosting","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/assets/images/onshape4frc-logo.png"},"name":"Jack Tervay"},"headline":"Reducing Robot Weight - Best Practices &amp; Strategies","dateModified":"2020-09-30T00:00:00+00:00","datePublished":"2020-09-30T00:00:00+00:00","image":"/assets/images/blog/reducing-robot-weight/cover-image.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"/blog/reducing-robot-weight/"},"author":{"@type":"Person","name":"Jack Tervay"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link href="/assets/css/screen.css" rel="stylesheet">
+
+    <link href="/assets/css/main.css" rel="stylesheet">
+
+
+</head>
+
+
+
+<body class="layout-post">
+    <!-- defer loading of font and font awesome -->
+    <noscript id="deferred-styles">
+        <link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+            integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    </noscript>
+
+
+    <!-- Begin Menu Navigation
+================================================== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+        <div class="container pr-0">
+
+            <!-- Begin Logo -->
+            <a class="navbar-brand" href="/">
+                <h1 class="sitetitle">Onshape4FRC</h1>
+            </a>
+            <!-- End Logo -->
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMediumish">
+
+                <!-- Begin Menu -->
+
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog">Blog</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/getting-started">Getting Started</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/calculators">Calculators</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cad-library">CAD Library</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/external-resources">External Resources</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="/contribute">Contribute</a>
+                    </li> -->
+
+                    <!-- <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/"> Docs</a>
+                </li> -->
+
+                    <!-- <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://github.com/wowthemesnet/mediumish-theme-jekyll"><i class="fab fa-github"></i> Fork on Github</a>
+                </li> -->
+
+                    <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+                </ul>
+
+                <!-- End Menu -->
+
+            </div>
+
+        </div>
+    </nav>
+    <!-- End Navigation
+================================================== -->
+
+    <div class="site-content">
+
+        <div class="container">
+
+            <!-- Site Title
+================================================== -->
+            <div class="mainheading">
+                <p class="lead">
+                    Onshape CAD and Design resources to help teach for FRC.
+                </p>
+            </div>
+
+            <!-- Content
+================================================== -->
+            <div class="main-content">
+                <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share sticky-top sticky-top-offset">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://twitter.com/intent/tweet?text=Reducing Robot Weight - Best Practices & Strategies&url=/blog/reducing-robot-weight/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://facebook.com/sharer.php?u=/blog/reducing-robot-weight/" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+
+        <!-- <li class="ml-1 mr-1">
+            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=/blog/reducing-robot-weight/" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li> -->
+
+    </ul>
+    
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+        
+        <img class="author-thumb" src="https://www.chiefdelphi.com/letter_avatar_proxy/v4/letter/j/5daacb/120.png" alt="Jack Tervay">
+        
+    </div>
+    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+        <a target="_blank" class="link-dark" >Jack Tervay</a><a target="_blank" href="https://www.chiefdelphi.com/u/jacktervay/summary"
+            class="btn cd">CD</a>
+        <br />
+        <span class="author-description"><b>Team:</b> 6328</span>
+        <br />
+        <span class="author-description">6328 Technical Mentor.</span>
+    </div>
+</div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">Reducing Robot Weight - Best Practices & Strategies</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image -->
+            
+
+            
+            <img class="featured-image img-fluid"
+                src="/assets/images/blog/reducing-robot-weight/cover-image.jpeg"
+                alt="Reducing Robot Weight - Best Practices & Strategies">
+            
+
+            
+            <!-- End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <p>A point of particular importance within the FRC space is the challenge to build within the weight limit. Despite FRC being around for more than 20 years, there is still a continual struggle with designing and building robots to be less than the designated weight limit (recently, 125 lbs). There have been numerous discussions on the topic of reducing robot weight, resulting in hundreds of different practices and strategies used by teams around the world. This blog aims to consolidate these best practices and strategies into a single document.</p>
+
+<ol id="markdown-toc">
+  <li><a href="#design-considerations" id="markdown-toc-design-considerations"><u>Design Considerations</u></a>    <ol>
+      <li><a href="#plan-a-weight-budget-from-the-start" id="markdown-toc-plan-a-weight-budget-from-the-start">Plan a Weight Budget From the Start</a></li>
+      <li><a href="#monitor-the-weight-as-you-go" id="markdown-toc-monitor-the-weight-as-you-go">Monitor The Weight As You Go</a></li>
+      <li><a href="#mechanism-compliance" id="markdown-toc-mechanism-compliance">Mechanism Compliance</a></li>
+      <li><a href="#mechanisms-that-do-more-than-one-job" id="markdown-toc-mechanisms-that-do-more-than-one-job">Mechanisms That Do More Than One Job</a></li>
+      <li><a href="#does-this-have-functionality" id="markdown-toc-does-this-have-functionality">Does This Have Functionality?</a></li>
+    </ol>
+  </li>
+  <li><a href="#motors--power-transmission" id="markdown-toc-motors--power-transmission"><u>Motors &amp; Power Transmission</u></a>    <ol>
+      <li><a href="#brushless-motors" id="markdown-toc-brushless-motors">Brushless Motors</a></li>
+      <li><a href="#evaluate-motor-selection" id="markdown-toc-evaluate-motor-selection">Evaluate Motor Selection</a></li>
+      <li><a href="#use-a-lighter-transmission-method" id="markdown-toc-use-a-lighter-transmission-method">Use A Lighter Transmission Method</a></li>
+    </ol>
+  </li>
+  <li><a href="#drivetrain" id="markdown-toc-drivetrain"><u>Drivetrain</u></a>    <ol>
+      <li><a href="#be-careful-not-to-skimp-on-your-drivetrain" id="markdown-toc-be-careful-not-to-skimp-on-your-drivetrain">Be Careful Not To Skimp On Your Drivetrain</a></li>
+      <li><a href="#be-mindful-of-weight-distribution" id="markdown-toc-be-mindful-of-weight-distribution">Be Mindful of Weight Distribution</a></li>
+    </ol>
+  </li>
+  <li><a href="#pocketing" id="markdown-toc-pocketing"><u>Pocketing</u></a>    <ol>
+      <li><a href="#scallop-the-edges-of-plates" id="markdown-toc-scallop-the-edges-of-plates">“Scallop” The Edges of Plates</a></li>
+    </ol>
+  </li>
+  <li><a href="#fasteners" id="markdown-toc-fasteners"><u>Fasteners</u></a>    <ol>
+      <li><a href="#use-smaller-fasteners" id="markdown-toc-use-smaller-fasteners">Use Smaller Fasteners</a></li>
+      <li><a href="#use-rivets" id="markdown-toc-use-rivets">Use Rivets</a></li>
+      <li><a href="#avoid-aluminum-fasteners" id="markdown-toc-avoid-aluminum-fasteners">Avoid Aluminum Fasteners</a></li>
+    </ol>
+  </li>
+  <li><a href="#accurate-cad-weights" id="markdown-toc-accurate-cad-weights"><u>Accurate CAD Weights</u></a>    <ol>
+      <li><a href="#have-a-complete--accurate-cad-library" id="markdown-toc-have-a-complete--accurate-cad-library">Have A Complete &amp; Accurate CAD Library</a></li>
+      <li><a href="#assign-materials" id="markdown-toc-assign-materials">Assign Materials</a></li>
+    </ol>
+  </li>
+  <li><a href="#smaller-is-better" id="markdown-toc-smaller-is-better"><u>Smaller is Better</u></a>    <ol>
+      <li><a href="#make-your-robot-as-small-as-possible" id="markdown-toc-make-your-robot-as-small-as-possible">Make Your Robot As Small As Possible</a></li>
+      <li><a href="#smallest-possible-wheels-gears-belts-and-more" id="markdown-toc-smallest-possible-wheels-gears-belts-and-more">Smallest Possible Wheels, Gears, Belts, and More</a></li>
+    </ol>
+  </li>
+  <li><a href="#gears--pulleys" id="markdown-toc-gears--pulleys"><u>Gears &amp; Pulleys</u></a>    <ol>
+      <li><a href="#aluminum-vs-steel-gears-depends-on-application" id="markdown-toc-aluminum-vs-steel-gears-depends-on-application">Aluminum vs. Steel Gears Depends on Application</a></li>
+      <li><a href="#use-pocketed-gears" id="markdown-toc-use-pocketed-gears">Use Pocketed Gears</a></li>
+      <li><a href="#3d-print-your-pulleys" id="markdown-toc-3d-print-your-pulleys">3D Print Your Pulleys</a></li>
+      <li><a href="#reduce-infill-on-3d-printed-parts-if-possible" id="markdown-toc-reduce-infill-on-3d-printed-parts-if-possible">Reduce Infill on 3D Printed Parts If Possible</a></li>
+    </ol>
+  </li>
+  <li><a href="#pneumatics" id="markdown-toc-pneumatics"><u>Pneumatics</u></a>    <ol>
+      <li><a href="#do-you-need-a-pneumatics-system" id="markdown-toc-do-you-need-a-pneumatics-system">Do You Need A Pneumatics System?</a></li>
+      <li><a href="#use-aluminum-fittings-instead-of-brass" id="markdown-toc-use-aluminum-fittings-instead-of-brass">Use Aluminum Fittings Instead of Brass</a></li>
+      <li><a href="#use-an-appropriately-sized-manifold" id="markdown-toc-use-an-appropriately-sized-manifold">Use An Appropriately Sized Manifold</a></li>
+      <li><a href="#use-smaller-tubing" id="markdown-toc-use-smaller-tubing">Use Smaller Tubing</a></li>
+      <li><a href="#smaller-regulators" id="markdown-toc-smaller-regulators">Smaller Regulators</a></li>
+    </ol>
+  </li>
+  <li><a href="#plastics" id="markdown-toc-plastics"><u>Plastics</u></a>    <ol>
+      <li><a href="#does-that-part-need-to-be-metal" id="markdown-toc-does-that-part-need-to-be-metal">Does That Part Need to be Metal?</a></li>
+      <li><a href="#low-load-plastics-can-be-very-thin" id="markdown-toc-low-load-plastics-can-be-very-thin">Low Load Plastics Can Be Very Thin</a></li>
+    </ol>
+  </li>
+  <li><a href="#shafts--intakes" id="markdown-toc-shafts--intakes"><u>Shafts &amp; Intakes</u></a>    <ol>
+      <li><a href="#consider-the-necessary-size-of-your-hex-axles" id="markdown-toc-consider-the-necessary-size-of-your-hex-axles">Consider the Necessary Size of Your Hex Axles</a></li>
+      <li><a href="#optimize-your-intake-hardware" id="markdown-toc-optimize-your-intake-hardware">Optimize Your Intake Hardware</a></li>
+      <li><a href="#utilize-bushings-in-place-of-bearings" id="markdown-toc-utilize-bushings-in-place-of-bearings">Utilize Bushings In Place Of Bearings</a></li>
+    </ol>
+  </li>
+  <li><a href="#tube-wall-thicknesses" id="markdown-toc-tube-wall-thicknesses"><u>Tube Wall Thicknesses</u></a>    <ol>
+      <li><a href="#use-116-wall-instead-of--wall" id="markdown-toc-use-116-wall-instead-of--wall">Use 1/16” Wall Instead of ⅛” Wall</a></li>
+    </ol>
+  </li>
+  <li><a href="#electrical" id="markdown-toc-electrical"><u>Electrical</u></a>    <ol>
+      <li><a href="#try-to-keep-the-battery-main-breaker-and-pdp-close-to-each-other" id="markdown-toc-try-to-keep-the-battery-main-breaker-and-pdp-close-to-each-other">Try to keep the battery, main breaker, and PDP close to each other.</a></li>
+    </ol>
+  </li>
+  <li><a href="#weighing-in" id="markdown-toc-weighing-in">Weighing In</a></li>
+  <li><a href="#credits" id="markdown-toc-credits">Credits</a></li>
+  <li><a href="#missing-something" id="markdown-toc-missing-something">Missing Something?</a></li>
+</ol>
+
+<h2 id="design-considerations"><u>Design Considerations</u></h2>
+
+<h3 id="plan-a-weight-budget-from-the-start">Plan a Weight Budget From the Start</h3>
+<p>Right from the beginning, your team should discuss and create a weight budget for your robot - X pounds for the drivetrain, X pounds for this sub-system, so on and so forth (including your control system!). When doing this, give yourself an allowance of 5-10 pounds as weight seems to sneak out of nowhere sometimes.</p>
+
+<h3 id="monitor-the-weight-as-you-go">Monitor The Weight As You Go</h3>
+<p>As you progress through the design and build process, continue to think about lightness at every step and weigh as you go. If you only realize you’re overweight once your robot is assembled, it’s often too late to make any meaningful changes.</p>
+
+<h3 id="mechanism-compliance">Mechanism Compliance</h3>
+<p>Does this mechanism need to be rigid or can it compliantly bend when it hits something? If applicable, make your mechanisms flex more by having more compliance (polycarbonate). Energy is force times distance so if you can increase the distance your part deforms, you resultantly decrease the force the part must withstand from an impact. Oftentimes compliant mechanisms end up being lighter than very rigid mechanisms due to material selection.</p>
+
+<h3 id="mechanisms-that-do-more-than-one-job">Mechanisms That Do More Than One Job</h3>
+<p>If your team is capable of something like this, think about designing a mechanism to do more than one task - a lot of this time this ends up saving some weight. Examples of multitasking mechanisms include elevators doubling as climbers in 2018 (254) as well as intake climbers in 2019 (2056).</p>
+
+<h3 id="does-this-have-functionality">Does This Have Functionality?</h3>
+<p>Reduce or completely eliminate things on your robot that don’t have a competitive function. Some expectations to this point are things like sponsor stickers or powdercoat (because who doesn’t like to look good?).</p>
+
+<h2 id="motors--power-transmission"><u>Motors &amp; Power Transmission</u></h2>
+
+<h3 id="brushless-motors">Brushless Motors</h3>
+<p>If your team can afford them, use them wherever possible. By switching a CIM with a NEO you save 1.85 pounds - that’s enough to make or break an important mechanism.</p>
+
+<h3 id="evaluate-motor-selection">Evaluate Motor Selection</h3>
+<p>It doesn’t matter if you choose to use a lightweight motor if you end up needing a heavy gearbox. Typically, the less reduction required the better.</p>
+
+<h3 id="use-a-lighter-transmission-method">Use A Lighter Transmission Method</h3>
+<p>Instead of using a fairly hefty 3:1 VersaPlanetary, you could probably save quite a bit of weight by simply using a 3:1 belt reduction from the motor to the output.</p>
+
+<h2 id="drivetrain"><u>Drivetrain</u></h2>
+
+<h3 id="be-careful-not-to-skimp-on-your-drivetrain">Be Careful Not To Skimp On Your Drivetrain</h3>
+<p>If there was a place to lighten the least, it would be your drivetrain. Arguably the most important mechanism on your robot, you really want to ensure that your drivetrain can hold up under a competition setting. With that being said, teams have had success using 1/16” wall tubing for their front and back rails. I would say this decision varies from game to game; if it’s a game where defense is relentless (2019) and you’re going to be receiving a lot of that, maybe it’s best to stick to ⅛” wall.</p>
+
+<h3 id="be-mindful-of-weight-distribution">Be Mindful of Weight Distribution</h3>
+<p>In addition to creating a robust drivetrain, you should also be thinking about the weight distribution of your robot. A lot of weight <em>above</em> the drivetrain with very little weight <em>on</em> the drivetrain is a surefire way to tip mid match. A top heavy robot with a fragile chassis is often an inadvertent oversight so it’s best to be thinking about this throughout the design process.</p>
+
+<h2 id="pocketing"><u>Pocketing</u></h2>
+
+<h3 id="scallop-the-edges-of-plates">“Scallop” The Edges of Plates</h3>
+<p>By removing unnecessary attachment points between plates and what it’s providing rigidity to, you can end up saving quite a bit of weight. Be mindful when doing this however - assess where material can be removed and how much can be removed (this comes with experience as well). Between the removal of material and the reduced amount of fasteners needed to attach the plate, this is a win-win if done correctly.</p>
+<div class="row justify-content-center pb-4">
+    <div class="col-md-7">
+        <h5 class="text-center">Code Orange Pocketing</h5>
+        <img src="/assets/images/blog/reducing-robot-weight/code-o-scallop.jpeg" />
+    </div>
+</div>
+
+<h2 id="fasteners"><u>Fasteners</u></h2>
+
+<h3 id="use-smaller-fasteners">Use Smaller Fasteners</h3>
+<p>Where you can, use smaller fasteners. Using 10-32 bolts instead of ¼-20 bolts in numerous places will end up freeing up some weight.</p>
+
+<h3 id="use-rivets">Use Rivets</h3>
+<p>Aluminum rivets instead of bolts in low-load connections saves, surprisingly, plenty of weight.</p>
+
+<h3 id="avoid-aluminum-fasteners">Avoid Aluminum Fasteners</h3>
+<p>Aluminum threaded fasteners are probably better left off of robots, as they’re easy to over-torque and break. If you do need them for whatever reason, use them for only large hardware with coarse threads and handle them with care.</p>
+
+<h2 id="accurate-cad-weights"><u>Accurate CAD Weights</u></h2>
+
+<h3 id="have-a-complete--accurate-cad-library">Have A Complete &amp; Accurate CAD Library</h3>
+<p>Besides being a great organizational habit and time saver, a complete and accurate CAD library with correct weights will make your designers’ job a whole lot easier. Not having to manually enter the weights of COTS parts or simply guessing the weight of a mechanism can effectively guide your design team into making better, more informed decisions. Some already existing CAD libraries include <a href="https://workbench.grabcad.com/workbench/projects/gczMZ2vZJYlzPJlob9wznnuhi1uqUhYIRx23KRz0l5Gq_g#/space/gcmegFZmFlpCU6pC0lOikiembdYGx3tphi11JfHJ0THJkK/folder/1357747">Spectrum’s CAD Library</a> and <a href="https://www.chiefdelphi.com/t/mkcad-2020-season-updates/367821">MKCad</a> for Onshape.</p>
+
+<h3 id="assign-materials">Assign Materials</h3>
+<p>In addition to a complete CAD library, it is highly recommended to put forth effort in assigning materials to all of your parts (plates, tubes, etc.). Your drivetrain CAD weight won’t be accurate if your tubes and plates aren’t assigned to a proper aluminum material. With all that said, leave yourself a buffer - a 125 pound robot in CAD will <em>not</em> weigh 125 pounds in real life, no matter how accurate your CAD weights are.</p>
+
+<h2 id="smaller-is-better"><u>Smaller is Better</u></h2>
+
+<h3 id="make-your-robot-as-small-as-possible">Make Your Robot As Small As Possible</h3>
+<p>As a consequence of the <a href="https://en.wikipedia.org/wiki/Square%E2%80%93cube_law">square-cube law</a>, shaving off even a couple of inches from your frame perimeter can make a world of difference in the long run. This isn’t to say that you should sacrifice mechanisms because you’ve set the length and width of your robot too small from the get-go - don’t do this.</p>
+
+<h3 id="smallest-possible-wheels-gears-belts-and-more">Smallest Possible Wheels, Gears, Belts, and More</h3>
+<p>Using 6” wheels when you can instead use 3-4” wheels is a bigger waste of weight than most may realize. Smaller wheels are not only lighter, but they also require less of a gear reduction for the same effective robot speed. The combination of six to eight lighter wheels and a lighter reduction makes a big difference in robot weight. This principle applies to numerous other types of hardware, including gears. If you need a 2:1 gear reduction, don’t use a 40t gear and an 80t gear unless it’s necessary. This sounds obvious, yet I’ve had plenty of firsthand experiences with silly mistakes like this.</p>
+
+<h2 id="gears--pulleys"><u>Gears &amp; Pulleys</u></h2>
+
+<h3 id="aluminum-vs-steel-gears-depends-on-application">Aluminum vs. Steel Gears Depends on Application</h3>
+<p>Using aluminum gears instead of steel gears is an acceptable practice in many applications and saves a large amount of weight. However, it is highly, highly recommended NOT to use aluminum gears in drivetrain assemblies. Additionally, I recommend, as a team, deciding what tooth count gears are acceptable for aluminum and which are not (example: aluminum gears above 24t, steel gears below 24t).</p>
+
+<h3 id="use-pocketed-gears">Use Pocketed Gears</h3>
+<p>Whether it be spending the extra $3 on <a href="https://www.wcproducts.com/pocketed-gears">WCP</a> or doing it yourself, use pocketed gears when possible. Pocketed gears can save quite a lot of weight, especially when you get into the high tooth count gears. 971’s 2016 robot saved about 2 pounds by lightening their gears.</p>
+
+<h3 id="3d-print-your-pulleys">3D Print Your Pulleys</h3>
+<p>In many cases you are able to use your own 3D printed pulleys. In addition to the weight and money savings, printed pulleys result in a lot more freedom design-wise. Integrating designs and creative uses often become a great deal easier with your own printed pulleys.</p>
+
+<h3 id="reduce-infill-on-3d-printed-parts-if-possible">Reduce Infill on 3D Printed Parts If Possible</h3>
+<p>This one isn’t likely to save a whole lot of pounds but is still an important consideration when printing parts. The number of walls you have will generally have a greater impact on part strength than infill will - for more information, check out Markforged’s Article: <a href="https://markforged.com/resources/learn/design-for-additive-manufacturing-plastics-composites/understanding-3d-printing-strength/3d-printing-settings-impacting-part-strength">3D Printing Settings Impacting Part Strength</a>.</p>
+
+<h2 id="pneumatics"><u>Pneumatics</u></h2>
+
+<h3 id="do-you-need-a-pneumatics-system">Do You Need A Pneumatics System?</h3>
+<p>Discarding pneumatics completely is a bold but often redeeming move. Getting rid of pneumatic systems drastically reduces weight, however sometimes a well positioned piston can accomplish things lighter and better than motors. Ultimately, this decision will vary from team to team - some use pneumatics galore while others rarely do.</p>
+
+<h3 id="use-aluminum-fittings-instead-of-brass">Use Aluminum Fittings Instead of Brass</h3>
+<p>Wherever possible, use aluminum fittings instead of brass.</p>
+
+<h3 id="use-an-appropriately-sized-manifold">Use An Appropriately Sized Manifold</h3>
+<p>Using an unnecessarily large manifold is a silly yet common mistake that can cost you a fair amount of weight. If you know you need 2 cylinders, perhaps acquire a 3 port base; a one port buffer is good for later (expected or unexpected) additions.</p>
+
+<h3 id="use-smaller-tubing">Use Smaller Tubing</h3>
+<p>In some applications, give some thought to using smaller pneumatic tubing. Smaller fittings and tubing provides a nonzero weight reduction, especially if you end up having long tube runs (which is often the case).</p>
+
+<h3 id="smaller-regulators">Smaller Regulators</h3>
+<p>Try to avoid using the huge pressure gauges and inline pressure regulators that the KOP comes with. Automation Direct has smaller and lighter push-to-connect variants available <a href="https://www.automationdirect.com/adc/shopping/catalog/pneumatic_components/special_purpose_pneumatic_fittings/pressure_regulators_-z-_gauges_-z-_indicators">here</a>.</p>
+
+<h2 id="plastics"><u>Plastics</u></h2>
+
+<h3 id="does-that-part-need-to-be-metal">Does That Part Need to be Metal?</h3>
+<p>A lot of people would be stunned at how much polycarbonate is used on a lot of great robots. Not everything needs to be metal and, in fact, polycarbonate works better than aluminum plates in many applications. Specifically if your mechanism needs to survive hits, it is much easier to build the mechanism to simply bend out of the way with polycarbonate than it is to build the mechanism to survive without yielding with aluminum.</p>
+
+<h3 id="low-load-plastics-can-be-very-thin">Low Load Plastics Can Be Very Thin</h3>
+<p>For robots with large surface areas of low load plastic sheets, switch to thinner plastic. For example, <a href="https://www.wcproducts.com/systems-structures/framing-material/polycarbonate/polycarbonate">WCP’s 1/32” polycarbonate</a> is great for things like sponsor panels and hopper walls.</p>
+
+<h2 id="shafts--intakes"><u>Shafts &amp; Intakes</u></h2>
+
+<h3 id="consider-the-necessary-size-of-your-hex-axles">Consider the Necessary Size of Your Hex Axles</h3>
+<p>Does that hex shaft really need to be .5”, or can you instead use .375” hex? Often people &amp; teams get into the habit of defaulting every hex shaft to .5” when in reality .375” would work in many circumstances.</p>
+
+<h3 id="optimize-your-intake-hardware">Optimize Your Intake Hardware</h3>
+<p>Intakes often span the width of your robot, resulting in some pretty long axles and rollers. To further the above point on the size of your shafts - also evaluate the lengths. If constructing an intake out of round tube rollers, use hubs or a dead axle at the ends of the roller to get rid of the unused middle portion of the hex shaft. If the intake allows for it, use smaller and thinner roller tubes; same thing with wheels - if possible, use smaller and fewer wheels.</p>
+
+<h3 id="utilize-bushings-in-place-of-bearings">Utilize Bushings In Place Of Bearings</h3>
+<p>Use bushings instead of bearings in low rotary points as they are typically lighter and smaller than bearings. Use case examples include intake pivots and one time use mechanisms.</p>
+
+<h2 id="tube-wall-thicknesses"><u>Tube Wall Thicknesses</u></h2>
+
+<h3 id="use-116-wall-instead-of--wall">Use 1/16” Wall Instead of ⅛” Wall</h3>
+<p>Many people and teams have this preconceived notion that 1/16” wall tubing is rarely applicable because it’s too thin and that ⅛” wall is simply just better. In reality, ⅛” wall is necessary for only a small portion of FRC applications; this includes, but is not limited to, superstructures and drivetrains (even some capable teams’ drivetrains are 1/16” wall tubing today). To compare the strength and weight savings of 1/16” vs ⅛” wall tubing, see the below <a href="https://www.chiefdelphi.com/t/how-does-your-team-reduce-weight-on-your-robot/386347/101?u=jacktervay">FEA analysis done by @JamesCH95</a>.</p>
+<div class="row justify-content-center pb-3">
+    <div class="col-md-11">
+        <img src="/assets/images/blog/reducing-robot-weight/tube-fea.png" />
+        <p class="text-center" style="font-size:90%">"<i>⅛” walled tube with the same linear density (weight per unit length) as a 1/16” walled tube. The 1/16” wall tube was substantially stronger because it is not riddled with stress concentrators. Something like 2-4x as strong.</i>"</p>
+    </div>
+</div>
+
+<p>Additionally, thinner walled tubing is generally cheaper and the cost is certainly lower since you don’t need to machine it a lot like you might with ⅛” wall.</p>
+
+<p>⅛” wall tubing still does have its uses however. It is advantageous to use ⅛” wall if you need to clamp or tap the tube wall for a bolt. Furthermore, you don’t need to be as nervous about crushing ⅛” wall when bolting through it.</p>
+
+<h2 id="electrical"><u>Electrical</u></h2>
+
+<h3 id="try-to-keep-the-battery-main-breaker-and-pdp-close-to-each-other">Try to keep the battery, main breaker, and PDP close to each other.</h3>
+<p>This reduces the length of large gauge wire that needs to travel between these components. Wire weight is nontrivial and adds up quickly - try to minimize the length of your wire runs, especially for larger gauge wire. Keeping wires runs short is also just a generally good practice, as transmitted power diminishes over distance.</p>
+
+<h2 id="weighing-in">Weighing In</h2>
+<p>As obvious as it sounds - make sure to remove your battery and bumpers from your robot before you weigh it. I’ve experienced this last minute “we’re over the weight limit” panic a couple of times - and a nonzero amount of these occurrences can be attributed to this silly mistake.</p>
+
+<h2 id="credits">Credits</h2>
+<p>The majority of the content in this post is from the discussion on <a href="https://www.chiefdelphi.com/t/how-does-your-team-reduce-weight-on-your-robot/386347">this ChiefDelphi</a> thread and what I could think of. Thank you to everyone who contributed to this insightful conversation - many of you delivered your two cents better than I could’ve (that’s why you might notice almost a direct ctrl-c ctrl-v of your comment!).</p>
+
+<h2 id="missing-something">Missing Something?</h2>
+<p>If I forgot to mention something that you think would fit well into this blog, please don’t hesitate to contact me - this goes for any mistakes you think I may have made!</p>
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+                <small>
+                    <span class="post-date"><time class="post-date"
+                            datetime="2020-09-30">30 Sep 2020</time></span>
+                    
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll"
+                            href="/categories#Design">Design</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+                
+                <a class="prev d-block col-md-6" href="/blog/using-tube-converter/"> &laquo; Using the TubeConverter Featurescript</a>
+                
+                
+                <a class="next d-block col-md-6 text-lg-right" href="/blog/using-extrude-individual/">Using the Extrude Individual Featurescript &raquo; </a>
+                
+                <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Begin Comments
+================================================== -->
+
+<!--End Comments
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+            </div>
+
+            
+
+        </div>
+
+        <!-- Begin Footer
+================================================== -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                        <!-- Copyright © 2021 Onshape4FRC -->
+                        Built by Max Westwater of FRC 6328
+                    </div>
+                    <div class="col-md-6 col-sm-6 text-center text-lg-right">
+                        <a href="/privacy">Privacy Information</a> |
+                        Built using the
+                        <a target="_blank" href="https://github.com/wowthemesnet/mediumish-theme-jekyll">Mediumish
+                            Jekyll Theme</a>.
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer
+================================================== -->
+
+    </div> <!-- /.site-content -->
+
+    <!-- Scripts
+================================================== -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script src="/assets/js/mediumish.js"></script>
+
+    
+
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    
+    <script id="dsq-count-scr" src="//demowebsite.disqus.com/count.js"></script>
+    
+
+    <style>
+    #cookie-notice {padding: 0.5rem 1rem; display: none; text-align: center; position: fixed; bottom: 0; width: calc(100% - 2rem); background: #222; color: rgba(255,255,255,0.8);}
+    #cookie-notice a {display: inline-block; cursor: pointer; margin-left: 0.5rem;}
+    @media (max-width: 767px) {
+        #cookie-notice span {display: block; padding-top: 3px; margin-bottom: 1rem;}
+        #cookie-notice a {position: relative; bottom: 4px;}
+    }
+</style>
+<div id="cookie-notice"><span>We would like to use third party cookies and scripts to improve the functionality of this website.</span><a id="cookie-notice-accept" class="btn btn-primary btn-sm">Approve</a><a href="/privacy" class="btn btn-primary btn-sm">More info</a></div>
+<script>
+    function createCookie(name,value,days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+    function eraseCookie(name) {
+        createCookie(name,"",-1);
+    }
+
+    
+        if(readCookie('cookie-notice-dismissed')=='true') {
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', '${{ secrets.GOOGLE_ANALYTICS }}', 'auto');
+            ga('send', 'pageview');
+        } else {
+            document.getElementById('cookie-notice').style.display = 'block';
+        }
+    
+    document.getElementById('cookie-notice-accept').addEventListener("click",function() {
+        createCookie('cookie-notice-dismissed','true',31);
+        document.getElementById('cookie-notice').style.display = 'none';
+        location.reload();
+    });
+
+</script>
+
+</body>
+
+</html>
