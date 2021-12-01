@@ -156,6 +156,15 @@ comments: false
             <a href="/contribute" class="btn btn-primary">Add to the CAD Library</a>
 
         </div>
+
+        <div style="margin-top: 50px" class="sticky-top sticky-top-310">
+            <h5>MKCad missing something?</h5>
+
+            <p>If you encountered a bug, missing item, or something else</p>
+
+            <a href="/mkcad-report" class="btn btn-primary">Report Form</a>
+        </div>
+
     </div>
 </div>
 
