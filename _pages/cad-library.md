@@ -45,6 +45,9 @@ comments: false
             <p>You should now see the label with all the documents on the left side of navigation below the create
                 button.</p>
 
+            <p>Interested in helping keep MKCad up-to-date and becoming an active contributor? Check out <a target="_self" rel="noopener noreferrer"
+                    href="/MKCad-Contribute">this page</a> for more information!</p>
+
         </div>
 
         <div id="Featurescripts">
@@ -158,11 +161,11 @@ comments: false
         </div>
 
         <div style="margin-top: 50px" class="sticky-top sticky-top-310">
-            <h5>MKCad missing something?</h5>
+            <h5>MKCad Missing Something?</h5>
 
-            <p>If you encountered a bug, missing item, or something else</p>
+            <p>If you encounter an error or a missing COTS part in MKCad and/or you have a suggestion, please take a second to report it.</p>
 
-            <a href="/mkcad-report" class="btn btn-primary">Report Form</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSczAoCgL3ohHIl2EJZ8f5oukM8DuxikSeJilVhivM6_PXLfvw/viewform?usp=sf_link" class="btn btn-primary">MKCad Report Form</a>
         </div>
 
     </div>
