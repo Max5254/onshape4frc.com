@@ -46,7 +46,7 @@ comments: false
                 button.</p>
 
             <p>Interested in helping keep MKCad up-to-date and becoming an active contributor? Check out <a target="_self" rel="noopener noreferrer"
-                    href="/MKCad-Contribute">this page</a> for more information!</p>
+                    href="/mkcad-contribute">this page</a> for more information!</p>
 
         </div>
 
@@ -156,16 +156,14 @@ comments: false
 
             <p>If we're missing any useful resources be sure to let us know so we can get it added.</p>
 
-            <a href="/contribute" class="btn btn-primary">Add to the CAD Library</a>
+            <a href="/contribute" class="btn btn-primary mb-4">Add to the CAD Library</a>
 
-        </div>
-
-        <div style="margin-top: 50px" class="sticky-top sticky-top-310">
             <h5>MKCad Missing Something?</h5>
 
             <p>If you encounter an error or a missing COTS part in MKCad and/or you have a suggestion, please take a second to report it.</p>
 
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSczAoCgL3ohHIl2EJZ8f5oukM8DuxikSeJilVhivM6_PXLfvw/viewform?usp=sf_link" class="btn btn-primary">MKCad Report Form</a>
+
         </div>
 
     </div>
