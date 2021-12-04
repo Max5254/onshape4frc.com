@@ -18,7 +18,9 @@ comments: false
                 a community created library and you can see its latest updates in the <a target="_blank"
                     href="https://www.chiefdelphi.com/t/mkcad-2020-season-updates/367821">ChiefDelphi Thread.</a></p>
 
-            <p>The easiest way to use this library is to subscribe to the MKCad App, which is available on the <a href="https://appstore.onshape.com/apps/Manufacturers%20Models/2ZT7X5D646R3LM3ZND7LGBTYRVM4SVH6CDDGM6I=/description" target="_blank" rel="noopener noreferrer">Onshape App Store.</a> Simply click "Subscribe" on this page and follow the prompts.</p>
+            <p>The easiest way to use this library is to subscribe to the MKCad App, which is available on the
+                <a href="https://appstore.onshape.com/apps/Manufacturers%20Models/2ZT7X5D646R3LM3ZND7LGBTYRVM4SVH6CDDGM6I=/description" target="_blank" rel="noopener noreferrer">Onshape App Store</a>.
+                Simply click <code>Subscribe</code> on this page and follow the prompts.</p>
 
             <p>Once you have subscribed to the app, it will be available in your assemblies on the right side of your screen:</p>
 
@@ -38,9 +40,9 @@ comments: false
                         href="https://cad.onshape.com/documents?nodeId=3&resourceType=filter&q=type:document%20name:%22MKCad%22%20description:%22Official%22">this
                         link.</a></li>
                 <li>Click the label icon in the top right (next to the trash can) and then in the drop down click
-                    'Create New Label'. Call it 'MKCad'</li>
+                    <code>Create New Label</code>. Call it 'MKCad'</li>
                 <li>Next you will add all documents from this search to the label by right clicking on the document,
-                    clicking 'Labels...', then adding to the newly created MKCad label</li>
+                    clicking <code>Labels...</code>, then adding to the newly created MKCad label</li>
             </ol>
             <p>You should now see the label with all the documents on the left side of navigation below the create
                 button.</p>
@@ -68,13 +70,13 @@ comments: false
                 <div class="card card-body">
                     <ol>
                         <li>Open any Onshape document and go inside of a part studio</li>
-                        <li>Click the right most button on the toolbar ('Add custom features')</li>
+                        <li>Click the right most button on the toolbar (<code>Add custom features</code>)</li>
                         <ul>
                             <li>Note: If you have previously added any Featurescripts one of those may show up as the
                                 right most icon. In that case click the dropdown to show the add button.</li>
                         </ul>
                         <li>Paste the link of the Featurescript you're looking to add into the search bar (you can use
-                            the 'Copy Link' button next to the below scripts')
+                            the <code>Copy Link</code> button next to the below scripts)
                             <ul>
                                 <li>Note: Many of the below feature scripts are part of the same overall document so you
                                     can add multiple from the same link.</li>
