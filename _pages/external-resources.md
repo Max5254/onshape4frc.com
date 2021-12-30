@@ -21,6 +21,13 @@ comments: false
                 allowfullscreen></iframe>
         </div>
 
+        <div id="collaborationWebinar">
+            <h4>Collaborate with CAD Using Onshape in FIRST</h4>
+            <p>Webinar on how to successfully collaborate with your team using Onshape to be able to have as many members involved as possible.</p>
+            <a href="https://www.onshape.com/en/resource-center/videos/collaborate-with-cad-using-onshape-in-first" target="_blank"><img src="/assets/images/CollaborateWithCadPreview.png"/></a>
+
+        </div>
+
         <div id="RAMP">
             <h4>RAMP Video Series</h4>
 
