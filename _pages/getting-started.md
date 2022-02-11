@@ -115,6 +115,12 @@ comments: false
                         target="_blank">Importing and Exporting Data</a></li>
             </ol>
         </div>
+        <div id="curriculum">
+            <h4>Onshape Intro to CAD Curriculum</h4>
+            <p>Onshape has developed their own course to help educators teach CAD to new students. This page provides curriculum for you to teach an introduction to CAD with slides, teacher notes, assignments, and starting documents. This can serve as either a fully complete curriculum to present or a great source of inspiration for teaching your FRC students.</p>
+
+            <a href="https://learn.onshape.com/courses/intro-to-cad-curriculum" target="_blank">View the course here!</a>
+        </div>
     </div>
     <!-- Right side -->
     <div class="col-md-4">
