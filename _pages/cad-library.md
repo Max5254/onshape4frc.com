@@ -47,8 +47,7 @@ comments: false
             <p>You should now see the label with all the documents on the left side of navigation below the create
                 button.</p>
 
-            <p>Interested in helping keep MKCad up-to-date and becoming an active contributor? Check out <a target="_self" rel="noopener noreferrer"
-                    href="/mkcad-contribute">this page</a> for more information!</p>
+
 
         </div>
 

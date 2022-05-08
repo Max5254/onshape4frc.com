@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Contribute To MKCad
-permalink: /mkcad-contribute
 comments: false
+hidden: true
 ---
 
 MKCad is an FRC COTS parts library run and maintained by the community. As such, it’s important to recognize that there may often be missing, misplaced, or mislabeled parts that the contributors haven’t gotten around to fixing or are unaware of. If you ever encounter an issue like this, or have any suggestions, we’d appreciate your feedback!
