@@ -1,0 +1,175 @@
+---
+layout: page
+title: FRC 3005 RoboChargers Onshape CAD Class
+slug: test
+permalink: /robochargers-curriculum
+comments: false
+---
+
+
+<!-- Left side -->
+<div class="row justify-content-between">
+    <div class="col-md-8 pr-5">
+
+        <p>
+            Below is a great CAD curriculum created by Orion DeYoe of FRC 3005 RoboChargers which covers an introduction
+            to Onshape and some general FRC concepts and build styles. It was created for use within their own team but
+            can apply generally to anyone who is learning. To follow along with the discussion, check out the
+            <a href="https://www.chiefdelphi.com/t/frc3005-robochargers-summer-onshape-cad-class/412182" target="_blank">ChiefDelphi thread</a> for the course.
+        </p>
+
+        <table class="table">
+            <tr>
+                <th scope="col">Week</th>
+                <th scope="col">Engineering Topics</th>
+                <th scope="col">COTS Highlights</th>
+                <th scope="col">CAD Topics</th>
+
+            </tr>
+            {% for week in site.data.FRC3005SummerOnshape %}
+            {% assign d = week[1] %}
+            <tr onclick="showWeek({{ week[0] }})">
+                <td>{{ week[0] }}</td>
+                <td>{{ d.engTopic }}</td>
+                <td>{{ d.cotsHighlight }}</td>
+                <td>{{ d.cadTopics }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        {% for loop in site.data.FRC3005SummerOnshape %}
+        {% assign week = loop[0] %}
+        {% assign d = loop[1] %}
+        <div id="week{{ week }}" class="weekContent" style="display: none">
+            <h4>Week {{ week }}</h4>
+
+            <h5>Engineering Topic</h5>
+            <p>{{ d.engTopic }}</p>
+            <div class="responsive-iframe">
+                <iframe src="https://docs.google.com/presentation/d/{{ d.engSlides }}/embed" loading="lazy"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            </div>
+            <h5>COTS Highlight</h5>
+            <p>{{ d.cotsHighlight }}</p>
+            <div class="responsive-iframe">
+                <iframe src="https://docs.google.com/presentation/d/{{ d.cotsSlides }}/embed" loading="lazy"
+                        allowfullscreen="true" mozallowfullscreen="true"
+                        webkitallowfullscreen="true"></iframe>
+            </div>
+
+            <h5>CAD Topics</h5>
+            <p>{{ d.cadTopics }}</p>
+            {% for v in d.cadVideos %}
+            <div class="responsive-iframe">
+                <iframe src="https://www.youtube.com/embed/{{ v }}"
+                        loading="lazy"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+            </br>
+            {% endfor %}
+        </div>
+        {% endfor %}
+
+        <!-- Prev/Next -->
+        <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            <a id="prev" class="prev d-block col-md-6" onclick="incrementWeek(-1)"> &laquo; Previous</a>
+            <a id="next" class="next d-block col-md-6 text-lg-right" onclick="incrementWeek(1)">Next &raquo; </a>
+            <div class="clearfix"></div>
+        </div>
+
+
+    </div>
+    <!-- Right side -->
+    <div class="col-md-4">
+        <div class="sticky-top sticky-top-80">
+            <h5>Any feedback?</h5>
+            <p>Did you struggle with any parts of this guide? Anything to add? We'd love to hear it to we can
+                improve
+                the content.</p>
+            <a href="/contribute" class="btn btn-primary">Give Feedback</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        showWeek();
+    });
+
+    function incrementWeek(increment) {
+        const urlWeek = window.location.hash;
+        const week = parseInt(urlWeek.replace("#week", ""));
+        console.log(week);
+        console.log(increment + week)
+        showWeek(increment + week);
+    }
+
+        function showWeek(requestedWeek) {
+        const maxWeek = '{{ week }}';
+        console.log("Max week: " + maxWeek);
+        let week;
+        let urlWeek = window.location.hash;
+        if (requestedWeek === undefined || requestedWeek === null) {
+            if (urlWeek === undefined || urlWeek === null || urlWeek === "") {
+                week = 1;
+            } else {
+                week = urlWeek.replace("#week", "");
+            }
+        } else {
+            week = requestedWeek;
+        }
+
+        week = parseInt(week);
+        if (isNaN(week) || week < 1 || week > maxWeek) {
+            week = 1;
+        }
+
+        if (urlWeek !== `#week${week}`) {
+            window.location.hash = `#week${week}`;
+        }
+
+        document.querySelectorAll(".weekContent").forEach(hide => {
+            if (hide.id !== `week${week}`) {
+                hide.style.display = "none";
+            }
+        });
+        const show = document.getElementById(`week${week}`);
+        show.style.display = "block";
+
+        const prev = document.getElementById("prev");
+        if (week == 1) {
+            prev.style.visibility = "hidden";
+        } else {
+            prev.style.visibility = "";
+            prev.href = `#week${week}`
+        }
+
+        const next = document.getElementById("next");
+        if (week == maxWeek) {
+            next.style.visibility = "hidden";
+        } else {
+            next.style.visibility = "";
+            next.href = `#week${week}`
+        }
+    }
+</script>
+
+<style>
+    .responsive-iframe {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 Ratio */
+        height: 0;
+        overflow: hidden;
+    }
+
+    .responsive-iframe iframe {
+        border: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+</style>

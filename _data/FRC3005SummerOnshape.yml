@@ -1,0 +1,85 @@
+1:
+  engTopic: What is CAD?
+  engSlides: 1i6CnXaNTmWA1f4EADPCX8wwTUZkairzOywY59xL9wJo
+  cotsHighlight: Fasteners
+  cotsSlides: 1e1LdL2FE7-_lhbJvlq6zlTQSItpKWRyg0dxAjQ3xhLA
+  cadTopics: Setting up Onshape. Adding MKCAD and featurescripts. Documents, Tabs, 3D Navigation
+  cadVideos:
+    - BRpb07BmJrA
+    - EqJ8XI3T5jM
+2:
+  engTopic: Manufacturing Methods
+  engSlides: 1WQzY8QepNeRGjUVZpQCJCxtL1CYuwQmnL-_O0AbQMFU
+  cotsHighlight: Raw Materials
+  cotsSlides: 1at_Sf-XU0XYsZRqqrw4Lb8YZBQNRII7auX_Q_tQvBUI
+  cadTopics: Documents, Tabs, Sketches (Shapes, Dimensions, Equations), Extrusions (Multiple Parts), Tube Generator
+  cadVideos:
+    - dTigh2D9HCk
+3:
+  engTopic: Torque & Moments
+  engSlides: 1I5dCTM-EH9zLHGORmtpgXcghdR-ciet0ovQAXYeVoEI
+  cotsHighlight: Shafts, Bearings, & Hubs
+  cotsSlides: 1Nwg96GdKP_i_9kE5wjeD0GGnjQUw7jk6Yy1HdHmu6Wc
+  cadTopics: Sketches (Constraints), Extrusions, Revolutions, Work Geometry
+  cadVideos:
+    - sfL5R43QUjE
+4:
+  engTopic: Gear ratios
+  engSlides: 1eTMoxJVEN_aZ3dzpWHGpPoI9JpMuOC8nArqn6dbEGfo
+  cotsHighlight: Gears
+  cotsSlides: 1ahO_XL68u0JN03h4tMpP5819G7Mkv-jHy_jykO6geKY
+  cadTopics: Hole Feature, Assembly (Grounding, Grouping, Mates)
+  cadVideos:
+    - bgV2Gs13B20
+    - Vmr6aI5tfLg
+5:
+  engTopic: Gearbox Design
+  engSlides: 1BB4te8UAhqPebPQb5ozjBOTKuK3J6IedH4C93z8nqpc
+  cotsHighlight: Planetary Gearboxes
+  cotsSlides: 1BqD41or1Zo918enOFMQjsuRFp_qWh1eGUwpMwX6cfPo
+  cadTopics: Layout Sketches (2-stage Gearbox), Importing Components, Gearbox Model
+  cadVideos:
+    - eHJzzhpfqyM
+    - NNNwRGs7Dq8
+6:
+  engTopic: "Mechanisms: Intakes & Launchers"
+  engSlides: 1ZS2AAZSDb3qkU0sTDiIBfNnCnWRucWHW1yBWFtiHotQ
+  cotsHighlight: Wheels (Drive & Intake)
+  cotsSlides: 147SJHkesN-kkuPy_XogHd41ZYA-qg8_YEEc8QCTYzbY
+  cadTopics: (continued) Layout Sketches (2-stage Gearbox), Importing Components, Gearbox Model
+  cadVideos:
+    - 4YOeZfyhOwU
+    - SfZQonpJL1U
+7:
+  engTopic: Pneumatic Circuits (Pressure & Flow)
+  engSlides: 15hNk3j2aFOEM9q1vTQahXp7rPbAI6-Gby8axJBI2g1g
+  cotsHighlight: Pneumatics
+  cotsSlides: 1gDiJkuG1-KTDIpBsy7BjPuTOz8Vl6xRRAR_BbMueglo
+  cadTopics: Layout sketches (pneumatic joint), model parts, create assembly, flexible assembly
+  cadVideos:
+    - fEyiXJyG8nY
+    - 6YsqERgkrG8
+8:
+  engTopic: Material Strength
+  engSlides: 16fycilFA0zfw2kU2DzA0Por-lvv4FnD_5ZECBe4vnwU
+  cotsHighlight: Chain & Sprockets
+  cotsSlides: 1kF4IcrM3D2JVkpPbUYfCM3VeQWF_KJf5Gh7_omIcc2M
+  cadTopics: (continued) Layout sketches (pneumatic joint), model parts, create assembly, flexible assembly
+  cadVideos:
+    - _eHcQpMpZ7U
+9:
+  engTopic: "Mechanisms: Arms & Elevators"
+  engSlides: 1ZmIADnqGzjQcjHs3yuG5r4U1tLArFVuKkypfRhdZSBg
+  cotsHighlight: Timing Belts & Pulleys
+  cotsSlides: 1Gbg4tnkEhc0bYpkVqW5IwYxmyYJvjGFJgIr1fRZadsQ
+  cadTopics: Drawings (views, dimensions, holes, ordinate dimensions)
+  cadVideos:
+    - 3jYVG6f1E9c
+10:
+  engTopic: DC Motor Performance
+  engSlides:
+  cotsHighlight: Motors
+  cotsSlides:
+  cadTopics: Motor & belt-driven roller project. Layout, model, and assemble.
+  cadVideos:
+    -
