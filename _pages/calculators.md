@@ -47,7 +47,7 @@ comments: false
                         <p>The AMB Robotics calculator is website with various mechanical calculators and associated formulas.
                             This calculator is web based with shareable links and the ability to change units between metric and imperial.</p>
                         <a href="https://ambcalc.com/" target="_blank" rel="noopener noreferrer">
-                            <img class="img-fluid lazyimg" src="/assets/images/ambcalc.png">
+                            <img class="img-fluid lazyimg" src="/assets/images/ambcalculator.png">
                         </a>
                     </div>
                 </div>
