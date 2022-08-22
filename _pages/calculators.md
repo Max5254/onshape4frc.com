@@ -9,43 +9,7 @@ comments: false
     <div class="col-md-10 pr-5">
         <p>This is a collection of various mechanical calculators which are useful while designing. These can help with
             determining gear ratios, gear center to centers, belt center to centers, chain lengths, and much more.</p>
-        <div id="WCP">
-            <h4>West Coast Products Calculators</h4>
-            <div class="row justify-content-center">
-                <div class="col-md-6 mx-auto pr-5">
-                    <div class="text-center">
-                        <h5>Gear Calculator</h5>
-                        <p>Used to determine the center distance between two gears of any given size. Can be done for
-                            either main type of gear used in FRC (20DP & 32DP).</p>
-                    </div>
-                </div>
-                <div class="col-md-6 mx-auto pr-5">
-                    <div class="text-center">
-                        <h5>Belt Calculator</h5>
-                        <p>Used to determine center to center distance for given pulleys. This calculator will only
-                            given you belt sizes which are sold by VexPro. Because belts come in specific sizes the
-                            calculator will show you the two closest sizes to your desired center distance.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-6 mx-auto pr-5">
-                    <div class="text-center">
-                        <a href="https://www.wcproducts.com/how-to-gears" target="_blank" rel="noopener noreferrer">
-                            <img class="img-fluid lazyimg" src="/assets/images/wcphowtogears.png">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-6 mx-auto pr-5">
-                    <div class="text-center">
-                        <a href="https://www.wcproducts.com/how-to-belts" target="_blank" rel="noopener noreferrer">
-                            <img class="img-fluid lazyimg" src="/assets/images/wcphowtobelts.png">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="JVN">
+          <div id="JVN">
             <h4>JVN Design Calculator</h4>
             <div class="row justify-content-center">
                 <div class="col-md-10 mx-auto pr-5">
@@ -70,6 +34,20 @@ comments: false
                             configurations.</p>
                         <a href="https://reca.lc/" target="_blank" rel="noopener noreferrer">
                             <img class="img-fluid lazyimg" src="/assets/images/recalc.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="ambcalc">
+            <h4>AMB Robotics Calculator</h4>
+            <div class="row justify-content-center">
+                <div class="col-md-10 mx-auto pr-5">
+                    <div class="text-center">
+                        <p>The AMB Robotics calculator is website with various mechanical calculators and associated formulas.
+                            This calculator is web based with shareable links and the ability to change units between metric and imperial.</p>
+                        <a href="https://ambcalc.com/" target="_blank" rel="noopener noreferrer">
+                            <img class="img-fluid lazyimg" src="/assets/images/ambcalc.png">
                         </a>
                     </div>
                 </div>
