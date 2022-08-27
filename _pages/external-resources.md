@@ -36,6 +36,12 @@ comments: false
                     href="https://www.youtube.com/user/973RAMP/feed">here</a>.</p>
         </div>
 
+        <div id="robochargers">
+            <h4>FRC 3005 RoboChargers Onshape CAD Class</h4>
+
+            <p>A course from FRC3005 which goes over Onshape tailored for FRC along with topics on general engineering and highlights of commercial off the shelf parts used commonly in FRC. You can checkout all the course materials <a href="/robochargers-curriculum">here</a>.</p>
+        </div>
+
         <div id="NicholasAarestad">
             <h4>Nicholas Aarestad's Onshape Video Series</h4>
 

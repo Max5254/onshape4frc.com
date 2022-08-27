@@ -28,8 +28,8 @@ comments: false
             </tr>
             {% for week in site.data.FRC3005SummerOnshape %}
             {% assign d = week[1] %}
-            <tr onclick="showWeek({{ week[0] }})">
-                <td>{{ week[0] }}</td>
+            <tr>
+                <td><a class="btn btn-light" onclick="showWeek({{ week[0] }})">{{ week[0] }}</a></td>
                 <td>{{ d.engTopic }}</td>
                 <td>{{ d.cotsHighlight }}</td>
                 <td>{{ d.cadTopics }}</td>
@@ -74,8 +74,8 @@ comments: false
 
         <!-- Prev/Next -->
         <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
-            <a id="prev" class="prev d-block col-md-6" onclick="incrementWeek(-1)"> &laquo; Previous</a>
-            <a id="next" class="next d-block col-md-6 text-lg-right" onclick="incrementWeek(1)">Next &raquo; </a>
+            <a id="prev" class="prev d-block col-md-6"> &laquo; Previous</a>
+            <a id="next" class="next d-block col-md-6 text-lg-right">Next &raquo; </a>
             <div class="clearfix"></div>
         </div>
 
@@ -98,15 +98,12 @@ comments: false
         showWeek();
     });
 
-    function incrementWeek(increment) {
-        const urlWeek = window.location.hash;
-        const week = parseInt(urlWeek.replace("#week", ""));
-        console.log(week);
-        console.log(increment + week)
-        showWeek(increment + week);
-    }
+    window.addEventListener('hashchange', () => {
+        console.log("hash change")
+        showWeek();
+    });
 
-        function showWeek(requestedWeek) {
+    function showWeek(requestedWeek) {
         const maxWeek = '{{ week }}';
         console.log("Max week: " + maxWeek);
         let week;
@@ -137,13 +134,14 @@ comments: false
         });
         const show = document.getElementById(`week${week}`);
         show.style.display = "block";
+        show.scrollIntoView();
 
         const prev = document.getElementById("prev");
         if (week == 1) {
             prev.style.visibility = "hidden";
         } else {
             prev.style.visibility = "";
-            prev.href = `#week${week}`
+            prev.href = `#week${week - 1}`
         }
 
         const next = document.getElementById("next");
@@ -151,7 +149,7 @@ comments: false
             next.style.visibility = "hidden";
         } else {
             next.style.visibility = "";
-            next.href = `#week${week}`
+            next.href = `#week${week + 1}`
         }
     }
 </script>
