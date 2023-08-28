@@ -2,29 +2,26 @@ max:
   show: true
   name: Max Westwater
   display_name: Max Westwater
-  team: 6328/5254
+  team: 6328
   avatar: https://www.chiefdelphi.com/user_avatar/www.chiefdelphi.com/maximillian/120/146348_2.png
   email: max.westwater@littletonrobotics.org
   cd: maximillian
-  description: "The lead silver medalist."
 dave:
   show: true
   name: Dave Powers
   display_name: Dave Powers
-  team: 6328/1678
+  team: 6328
   avatar: https://www.chiefdelphi.com/user_avatar/www.chiefdelphi.com/davepowers/240/126656_2.png
   email: dave@littletonrobotics.org
   cd: davepowers
-  description: "The lead milk consumer."
 jack:
   show: true
   name: Jack Tervay
   display_name: Jack Tervay
-  team: 6328
+  team: former 6328/2791
   avatar: https://www.chiefdelphi.com/user_avatar/www.chiefdelphi.com/jacktervay/120/159077_2.png
   email: jacktervay@gmail.com
   cd: jacktervay
-  description: "6328 Technical Mentor."
 julia:
   show: false
   name: Julia Schatz
