@@ -11,6 +11,13 @@ comments: false
         <p>This is a collection of other resources created by external members of the community. Not all of them are
             done in Onshape but still provide useful concepts which can be transferred between cad programs.</p>
 
+        <div id="frcdesign">
+            <h4>FRCDesign.org</h4>
+            <p>FRCDesign.org is a comprehensive learning guide and technical reference for FRC design using Onshape.</p>
+            <a href="https://www.frcdesign.org/" target="_blank"><img src="/assets/images/frcdesign.png"/></a>
+
+        </div> 
+
         <div id="onshapeWebinar">
             <h4>Official Onshape Webinars</h4>
             <p>This is a great video series created by PTC (makers of Onshape) specifically for how to use their product
